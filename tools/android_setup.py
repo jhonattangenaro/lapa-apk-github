@@ -20,3 +20,22 @@ p=M+'/AndroidManifest.xml'; s=open(p).read()
 if 'POST_NOTIFICATIONS' not in s:
     s=s.replace('<uses-permission android:name="android.permission.INTERNET" />','<uses-permission android:name="android.permission.INTERNET" />\n    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />\n    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />')
 open(p,'w').write(s); print('Android listo')
+
+# Firma fija: así cada APK nuevo se instala SOBRE el anterior sin perder datos
+g='android/app/build.gradle'; t=open(g).read()
+if 'lapa-debug.p12' not in t:
+    t+='''
+android {
+    signingConfigs {
+        debug {
+            storeFile file("../../tools/lapa-debug.p12")
+            storePassword "lapaapp123"
+            keyAlias "lapa"
+            keyPassword "lapaapp123"
+            storeType "pkcs12"
+        }
+    }
+}
+'''
+    open(g,'w').write(t)
+print('Firma fija configurada')
