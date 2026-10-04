@@ -1,0 +1,2890 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1A252B">
+<title>Lapa - Control de Gastos y Deudas</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAg9UlEQVR42o2beZBfV3XnP+fe995v7b1bUrdau2zLsmVb3g22hcEQFodAgggOIRNCJVQFJpNk/shUZgvFzNRkMsnUZEilKpnKkGUmpJwBY4jZDEE2BLPYYMuWLEu2rF3qbqm33/aWe8/88d5v6ZbDpFUqqX+/t9xz7lm+53vOFX78jxw8eNA88sgjDuC2AwcmE2feitcHvWc/wlZBxhCMqiIigIACKAoYkfxBxiAAqiCACIqA9wNvy7/q/uSXKr54noigSu8iVfWqfhGV08aYH6L6RJz4r738zKEFgIMHD9pHHnnEU6zodQX8R0U/eNBSCL73znv3GhN+TEXfY4yZERHUay6iKqr5G6QQtrvw/A2FAqT7qlwCQUC0pw9Fi8/yS7R3q6A6uH7t/TP4TmMMqh7v/Hkx5lFv+KMj3/rGkfWy/JMUUGjObbv5wGi9Kp8EfsXaIFLvUfV+cB+7zxhcPGtEzSVZI76sl0d7aul+mF9n1i5MC6UPLF0HdwJEjDHGBqh3CSJ/Ymz2b587dGipK9P/VwEHDhwIDh06lF1/5/33Yc2fBTbY7bMMIBPBrln+urtFu/Jr3xJEctNF19wgA4K+jsYGNNlXinR3fuAaVZ9/IANPUZyIBDaMcC474dL0l45+78mnurINvtK+nvB7br/3A8YGnzcik875DEFMV3gZkLb4RXJ/JFXwg+Zf7LbI62td13wmV2+HssYlMgXfM7tCeQPCq2r3KQZUs8w5IzKJmA9NbN58/JlvP/X8gQMHglOnTvmrFHDw4EH7+OOPu+tvf8PPmiD8DKqi6r0IQTc8DQrS3x8lQ7AiTEpCVTI6GDI1GNHBhfUVJuv+XhX4+lspQKaCoEzYlJHAk2CJPVjRfoy5al0iIhj13gFWjH3f5KYtL/3gO08ePnjwoD1y5Ij27yuCxHW33/MGa6Mn8030iBgzGJyMyOCmIAopMCIZm5MFOs0G9SggqlQ4wShLRFjyRVrJFegUnAenUkT3XDgrSmDBSv50r7k2MoSqZOxhGeImK+2UcrXKxdIE875EKNpzu26slMGUouBVveTaVpdm9x/7wVP/0JXZAsKRg+y+sz0UEH1NjBlHvRcxdr3ZDkbdrlmWxDPbPI91He7bPk6nk7DQaDFjYxpSIrEhFmhlsBrnN46WYWYYZkcMm+rKUKSIKO0UVmJIPUQWVIQSjn1+gU6rCd5xYOcoi60ONFfJynU6GExPjd1AKv2skq9ZAG+MsYi8ZXRmz/+68rX9CRwiyPP8J5zVe/+TCcPtLk0yMSbQAVsc3HEtJBcBL5bxbBmXtPgXD17PdXXDkVcNf/CjeVZaCdvKCxzONtKSgFs2KPdvF27fYtk2ZhgpC5FVVIXUQaPjubDsee4SPHlK+f4FoR179ss8ietwueP41X3j3H3NFG+5KeKTX3yRWmuRRnWKPDHlqbUXcHVtbhHBOuezIAy2k7b+E3zi4wcPHrQCyPV33b9blSOgRrpoRtcCk+7uC5JHXgRjLUNLZzmwyfCxe3dy9tIyncUmnz6ywNFGRkUMe3aO8d67x3jjrFKvGDIMqRoyBfX96G4EQlEio3RSz7MX4XPfX+WZF+aIMUxF8PGbNlAdrbNtZoTPPneOv35xkdbkDlKvvXV6VXymBKFZl2OEAlAoIl7V7z363SdPGEC909+wQRDkyEplbaTrm3wOerT4bx5I285TCy2ddkrcSkhix+ayZb6R8N5ba/zeu6o8MJ2QpY7FhqPRciSdDBdnaJaBc2jmyBJPs+1ZbHjaHc+tYyn/8W0lPvrAGJdbHcatoJmn00lpNGJqgeDX4IJ8x00gjE6X8V2EWawZ9YUxqLdBEKjwG4DaffvuHXOB/jGqtS6WlV58H4gq8jrgwRg06WBaK9w5PcJqo8NKI3fid9xe48P3jtJKlY4zGBGkyAaqmmdR7xFf5E7nEO8RFFElzqCTwm1byuyaCJGFlIqxiDGMVCK+8tIlXm4H+OpIAZCEViNhz30b2XrzCO1GytK5FmHZ9oNjIZ7kwm3ftGPL/7QjW7e+x1r7C96rFzCDji/rEvPVKEwxYcTc/DxZO2ZnNWRhscPuHSHvuKPG0nIHvMcaELH9WsDnwK0vvC8+8znE9gpZiiQxq82YvdNl6mXLmTMxI6WAb59d4osnl3Hjm3EmAIUkcVxz9xTXv3EjYRQwsbXO0nybznKGsaaPNXLg4I219SxzP7KTM1v+pbH2Fs1txqwRfgDdyiBg6aYcVbyxUKpy9Pw8z11cZmos4CfvqdBMlGjDFqINW3Kc3lrNdV8UDloIrVq4phYoByBNMJUhwpldBPURmotLTI8rz1/K+PPn5/nW5Q7x+Cy+VEdEiTuOXXeOc+e7t+EyUGvQQKhvr7B4pkXayDC2b8bGGG+sNc5ljUBVb80xvhZIR4vEor1UlwMuKWCorkWr3uNLVYLNu3lxYZGP7OxQqZWRnW8gnJwuDE7g+A/wZ49BEKGFpNotiAZrnCTBjm8i3HcAwjJWFbPlBuzL3+Km3Rf4vePjmKEJJIhQ71CEsGLYdtskS8spcZyROk+rnZLgqO+s0LoYY2w/eHvvc4im5tYAldm8lDWvg/PolZ/CYOW2thAQ72g4y207RnnHtU1075sYnZoBF+dX24DWjptJLp9H26uoCa6C/Np9mQ0Jr72dSr2KuDT/cmqKVukt7E//jp/YC589FTGiDhXBZ57SUEhshHYrJU0z0szT7qS0XEISeMRqERSlyOUqRQ01ayemt/7nAiv0wn1ed1+F1Nc5Qz9NGhEameHD25e4/8AttMZ2cOq1c3zzu6/wB3/+FD5LufHGHSTLy7grFxAbDNQQ/YdpkmCmZhnaczPfevoon/jUl5m7vEqtZCnXh6mNjqDnj/P42RKBKSxIwZYMQ9cO08kczTilGae0OimdLKOzkpKdTdYVJAWkRcsm39wivakOpA3WJhjfA5y9P7kPK5kKoxJz/54x3PQeIuP45veO8xdfeYWb3vZBfuv3v8BrpxeoTs+iYnuBTl3xDJcHP+cc5Y1bOH9+nh/OjWI33sS/+YPHePzQUaxPSce3cOe+rWwttYhd7rGaKaZmabqMpWbMSjuhEae0E0en48gCAZvHnL583f8jprsF/S/p5XqU/mIHFNQLZIVLtBJlz4Sw587bSTRAs5SPfuRBbtla4bN/+N8Ycp7jr5wnHB0nMxHeOdQr3jlc5vCZ4tMMVSEcHqfRzPjMn/0lL37jy7zjzmv4zV95K6VSSJJmTN68n7u3lWklDqOKlIT6baO01NPB0xGIBRIDmTXoWAC7St0ytbf8rgyB71a2DNby0kNoOkjPqK6pDIqYShonvO9t+4g2TtNsJBgMyUqbn3/vHTRWW+yYvZGb986SaEBQquMW51Eb9hQLYNRhK1WyoMTmjSE/99BNHHn5Ir/4gftJU4fzHlHFV0f52Yfu5LPHvkPqBBMZmq+s5llUFG89Seryyj0WMIo0fQ41ddCmcwuSXfvvUelHuh6DszYKDrhO8buIYI2w2s64decIj/yr+/C+CzZyq4lKIbYUAULWSXDG0nz22zSOvkAQhlh8USEa0iSlMjvL8JveibiMqFoCn5tuJ057KdSrUq2X+K0//R6f/vpJJuolstjlEd5A/c5h/Kil/UID/1qCCU2ujND00GufexCC/u5rb19F1zM1ui5i5YrwKoh6fuNdu4is0HJKYG2u2dDgRXBxhss8uAxbCbCjE2iScbEVMNc2eIGJsjBtUuzIBBKEuDiltdohCALEWsJSKYe9ziHOkbY7/OpP7OLxH5ynFTuiksHnFTzNF5uYqsVfcUjFgDGFK/sBVK9IgfiDnol305z8GAp1QCHWCEvNhA/dN8MDN0zSaMZoa5XVlRWcywOjBCFRvU51bJSoWsF7TzC+kSfm6vxoweJMTjIZgZ2R50MPziAKQbmEi2NW5xborLbwaZLzBcYTVSu4iQ1s21jl196+k3/3yEuEVvDO54tvKdmqg6CQ1vtePOtD/L7DB2tQSDcYriMCpEt190kBnEKlZHngulGSdownwFbqlCt1xBq8U9JOTHOlwZUL85QrFaav3cFCGvDXLzaYHi4zUi2DKh3neexkg7tW4A2B4fSPjtFpNKnUK1RG6pQqIxhrCn4xL8Ti1Zjbt9aZHSuz0EgIusWeQPFLL0r1rFu7OEAK9l4xiq4ReiDJrWFt1+CjoqiJU8fXDi/kuNF5JAixUZS7h3OItdTHx5navoWoVqXdSdg8PcbN+7bwjcOvcXp+ifNXGjzxw1fZMD3MDdfM0Gm0iaoVJrdvpjY1gQmiPMABJgwxYYTPMiLxfOPFOS4sxYRGBjKUz9MciuKv3lBdW9UEPdnWXbie/+uHgC7FpaSZZ9eGCgEuL0jmL9C8skzmczNTsRCEoEpYrRBEES5J+A+/+ZPs2j7FE998gSRN+cgH7uWjD99PrRTiFESUxdNnUbGIKlYgsIK1nnK1QjA8hpqMa6fKOO/W0dPSz14Dq18L4bTHWAdXMdKvS8lKP1d2awTNi4vxqoEswbWUIIwYnt2MrVQJqxVEhE6jRWNxNX+h9ziXP+dXP/Jmrtk8zvkLl/lnH36Q9vwqSSchCCxiAsrDI9TGhqiO1LE2IO3EZHGM73TI2m0IHBNVixUKkKZXcfUyyGUIg+2DouxRgh6iWfeI3Mj9GkpMB/zCe6hEhi+/sMT1kxG7N1RJpUQYGXy7w8WTZ1ieXwQxlOo1JjdOonFM5nJMnl5cxHUSfJyQnpsn7mRYKzhrqQVwcWmZ5fOX8FlGfXyEiZkN2DDAeU/oM1652OIz371AUJj/2oZLAeoYCOq6zooLzjDoskT93t7a/K+9AmKtK3lVqpHl889dZm895sZ37aLdhrTRZP7MJcrDdTZfu4NSrUq5HPKV7xzn5m3KxokajVZKaJXIZViXESYdtNEmKAV44JvPn+Et9+zK3arV4fL5OU4fPsbkzCRhtUJZPC+9OsdffW+OiXoJ7wcbMbquk7TGcAcwXU74BIN08lU3yTo2QHrcWpFhPEMVy/CV8zQvjiBjG0habTZsnaY6NoIqJK02gU+phYY/+dz3+Ok37Ga4EjF3QXn86ePMLzW4edsElUDIFB5/5hSz0yPYJKHZTjDWMDEzRX24SrLawEYB7cYq0blXmKgN47wy2HdS7e9fnu9/fCewZwEyINggNhhkhUTMQJ2gZA7KBnYNOc796CjDt4TUp8bwmSdeXsFGEQQBzbbn7htmqFdCDj1/GrEhX/72MY6+chEVw7EzV3j4wb1YY7hl7zT33riZZqMNXnGJJ0sS8J7yUI2s0eLCDw4zqW0moxpnWpaS0cHmWb9g16v5rO7uixTE+bYbblUG2thrMsJ6Wmyg+2tEaTthz7DjT25fpbGc0E4tG/ddx/DsJmwUomJyKsxYNAwYGh0mqFTIVDh7aZmnnzlBO07Zf/0sN+7egBXBtVssz19B1OUgRvvV6Oqly1x87iWIm2waL/GJl2s8fqnEcJCjUtZ1lHq8pq614r6rS54GlRxjD7a3u67PIDL0fUZEBGIn3DWeMhxCNlTCN1LO/uAFyicvMLZlE5XJHAGaMEK8Y3FhGVP31Gc2sX3vONv37SwoME/SiWnMzZEuLCFJjPcOvCNpJbSWGyyfvcTK2UuUIqE+WiaIlPs2pDx+MSp8W6/O89LfTEEHNtAXnWclQIqaXNb25VDJu7DrMkQeTXN/rQeOt85kOGMIQ6gNhYixtBavcObiPBJFmEoZEwaINXlOL4VM3nQDI9fsJhweBlVcs8HyqVMsHH4R12whTnGxI4szsk6Mz1ICC9VaSLUeUCoZUgP3TDm21T3nW4aS6fv9YMO2jwN0XSzPNzzoDTd0NSd9IJHf0E2H0rUfjCjLqfDOzSn7JjwtJ4Qh2MCAtZjQEqWKU0GtIIEQ1kuEtQpRrYxrXGT52BWiWhUEXJzg2ikjM2OkzQrpSpNkpQnqCW1AYAMCC6USlKsBxgqZUyYjz0MzCf/9pTLlSPHrhicoWvP9oNhLFT1XCfosQAEQ1KMD5eKa/Fc06J0qJeP5hd1p/hJjMEW8qIZCEFmSTHA2xJRK2GqZ0vgY0XBAaWyIcGIWM7QRE9by52cJvjlPcvksyZVFktWMZHGFbHUV325DlmLxlCIp2F1FjJAAP70945HXUhYTS2gGLKBblmufxe5li4EWXzAIgWU92hN6GMEUGcCIspQI79mactuU0sgM1hbTHJIPEoQVS9lG+KiK1OuEozVK41XCzTcTzNxIUIkgaeA7DUQ8JhyD6Bqi2JPOncSdfYbkSpl0qYI2lvHNFqSdvH9QuKARxall+4jn4d2O33veMlbyvTB1dR9Di9zfn+RQJC+HZTDHM+gKOpBX83o6dTBkPb98vccbi7FgjCBiECNgDCYKCYeq2NEx7NgwdmqKYOubCaoB2dmnWTx6mPaVRcgcaTNGwoDyhnFGr9tJddtdpBPvIzz7TdylM2SXA/yi4FY9Lk7zsreI0lah4S0P71Y++5rjXMtQMv12ufT2fC2fifYzgh2e3PA7uVJk3fDK2gyqmvfuVxJ4/86Mn98jrGY5KyQ29zUxuf+bSgk7PEw4OUowPY3d8RBWz7D0xF+y+OwRguEKwzu3UN86jVtqQuxoXVjm4jPHyeaOMDobwfQDWL8IyUrRPcpQ53KWSPqjN5kXJiq5lT5x1lKxspZpVhmAwbpmYEsRAu8UY9ZgqdfpDuRml3oYDT0fuk5JvGBMv2OMCGoEE5pcAUM17GgNM/sWbOcFLn3hb1HKTD9wPSYqoR585vPwGgbUN4aUR8ssvLRMa+5Rdr+vQTb7VmxnGZ9k+HYb6SSIV8Rpr7NsDTSd4d07lP/9suNUwxKZAj8MDFmt6WUMcAVGZJAh8ai6Hi0+CIqMQDMT3r7Fs3fS0vGmN/XRe7wVTKlEUK8TDJcwm/ZjzQrzX/s8ohEz98zi2m3SpRV8q4Vvt0lbMUmjQ3upQ9xKGdlcZfVizMlHv4JtPo+ZvY9wtIqt1TClsEeMdGGeAKkXJiuGn9rhaaWux39qr3usrzOY5VF83gtU9Xj1+F6vriAUuoWSV5xXQjzv3VGMrwiIyYcdu8DJmFwBplbBjExgxnfSfvFLNC+sMrWnSudyglzz8Zw86awicULazog7niT2JO2MxpU2lfESl17usPr9r2IrFRjfgq2G2HI5d7Fi6FLJJ0uMQDtT3rXFs7HsSFy/C92l+gu4x2D1i4LJx8yKpumaf9dx/6ly/XDGvnGlmUnhNhAFQmjzklSMQYIAtaD1WTSeZ/mFo4xMldDyLPaWf42M3U5wzx+SlXZBZ4V4tU1j/hKrcxdpL6+SxUrcUQgsc8+fhcXj6NBWNLQQhpjAIlawVqhEeeaxRokzZUtduXsjtNJiYKYngxZ9CN/vcfgc2QaoDHD/a6YCBplE4kx54yalFsKqV0SgFBpOXk6JLMyMRWQK1SigMlaBjdugdRppJoRDoFt+Bi1v4tKfvZtw/DrqlQVMp0kws5fpB9+GT9pc/t5jtE6+iHMZXgPilRK2cZrKjgdh4yhJK6bRaGJNwkqinF5M2TdTIk5zJGtEeMNGz2OvCX3582zgC0q8u/ndgS9bH5/6natD3mDY6Kvko9c7tg1BVszilCNopsqhV2Lu2VFFg4ALHcOjTy/w2Jdf4tizR9lo20yMG5punMruAwxt241tHiVYOU660sBvfpBkaAfLC5fZtP8B5g5/h01v/gUyL8TzZzh0dJHP/d0Rjh49R8V4RgPHWKB85UiTUslwzYaQVpLvk/dKqI4vnhLSghvQAUpsUKbub0F3hk/XCNzd/PxT55XRELaVPUlmIQBrlOU2XG56Dl9M+ORXF5gcivj+qTnasSVLX+XRyzEv7x/i92/YSev5P+fC6ePU7/gwQwd+l+zZP8J/+1PE5SWGdk8SWOHMM19ny3t+Hd1wLdnTX+VLRxs8dmKFrUOvUqvUOBTCnTsNPnUcPt/hA7cNcWYxY6RkSVXJnDJTgc1Vz8srhkoga+qDXlUgfVrD9Hp+gxhaB4mRfAJ0NHTUxZG6/vVxppxddrx//xAP3VjjTbvKTNXKDNVDKvUqt+ya4LlTKU8/e4HJfQ8wMtSi89Vfx8cNdHgP2fIKQW2ExqVznPjq37L7nR/ixc99mlLWpnrg/Tx9usn+HROMjA0xPBwxVqvyxh0V3nFjlV+5d4SVjmc1zlMhmgfqsng2lJRM//HBaNE+TxZQjEYMMkIygJ1y/xHKVjHqcc4TeIPzykjJ8N4bq7jCbhbbymrSwTtLKMLcSotGoqwstWiV9iJv/0U2Rp7GxXM0//5PKUd1Lh05zNi9N7L59gf57v/4JLWZa2heucKJZw/TzIT51TYT1QgUFlsdSqbC7omA9pBl/0xEnEKSFNMmHoxTKtbj1RZdYOnVBYP9z2ITNVBYFGRc85whaxtA0htzzbySOrCpIsbnFZkoyx1f9O2gHsGGOhydcxgyyoHBJwlXVirok/+VuW99nrH3fJKV//NxhsMlTHWMC3//dY48/iWsUUJxEFa48PUv0JCM4bERqhZaSUbqoBIpk1VYbSmZVzqAaJ8P9E7JsnwgrJfdBkZ6umO5mgslqrpoBM4WJq+DjFAvh6IYHIuJsNQEFytp7HGpz1OJ9utsEXjH3jKd1JF4YbEJ739oK3ddW+fKcsgGOc3qX/wSQ0EDE5TJ2h1ELPVqhWq1ii3XsT4vWt73c/v45bdv5HIn35OFtuPBXYbhQMkyn7fGi/Tm0nw9LvE0O8qldj4E3cU03vtek6QASF1Zz9rayORdInILeC8ipit4bygSsAYaiXJbNWG2ArEvCqDuTFlxT5Iqm+vCVE04dnaVyWtm+S+f+vdUGs9z7uVFTGYZG3J4D5o5NFNeO9MhTjzeOTorbRJvueMndzNRWWb/z/0ar15a5sLRY3xgX403b81H52Qwt2dKlnjiWJHUc/JKxqdPCmrtunH8NSPZXhCj3n/JVkYmK2J4X48y1LXtIRHBiBB70DThvkmIXZ8iU5+DC+8V72C1lXHTuGG+4XjTu25i5407cSP7GUueY+Fii9UVSyhKYPM21tETbVorKQhM7JzinnduZ7a+hN7wMLJxA1PuLAvHzvLz11pWk3wmyHvFZTlhmnYcScfRajmizPE3r6R8ZyUismZdq6TIacLA/LD8rg1Hps8Zsl8yRuqFGwycABk4HmAMnSRl0mRcOxTQjLsL8SSJEscen3qGrfDoC6ssjU3zU/ddT9aaJ9g4g918L8N6Gpcs0Gg4mi2IU4NEIVv2jnPjHRPccG3AUGTRW3+RYNs2Wse+zZiDs0spTx6+yO1TAWmqJKknTTxpkgvfbnkqXnlhLuXRc8qiqaw9s7AO4BhjjHqdj1306zZenuvUxyd3iJg71HvXO6fSFb5wl45XfnmzZ6GRcK4DOysQqkIGOCVUpdnxfOF4mzk7xMF7tuM82LCKSa5gRmrI7gepTs0yNOSp1JRSpGzdUmZmpk51eAO6+W7MPT+LqXnSUz8kWYpZOn+ZXUPCyWXHUy8vMlOCYSuIU3BgMhCnPH0p5ZlLGfduCnlyJRjYd2FtIajO2sCA/sXl1478XwFkcuf1u/HuCKpGRKXfUFqru9/d1War9Xz5YkYb2DFkGI8ENTAfK2dbcN22Se67bgIpl6iNj1KbHCUcGSYcConGhpHRHRCOIEkCcQvvFKIyplYB38RdfoVs8QrZakp8ZYXW4jKNK8sEacoPT6/w/WOXmDQZ0/WAUJRWCieXU9LE87aZEkTwsaMlllxAIIpgBvvdKoiKiHekexdeffWEhYO2tXhooTwyttFYe5d6dXn1m/uMEcEhjASen9nkCARmI6Hmlcstz8WmZ7HlCDuOu3eNc9M148QeytUKlXreICXLIBN8nKGNS9C+hLoV1HQQaUJ6GX/lNdzcGdxym3Q1IVtZxccxokoWJzRbMZtHInbUAuZOLXJp1THfcGSxYzYSbp8MsYFQCeE7ywGXYiE0eQtvoMnlTBBYVf3j+VdP/BUHD9oAHslHZEN+WzP/LmPsdu+dU9R24WGmwnigjEVK4gw42FBVNlUoQFB+fGV04zBpEFGrVqiODiEi+CzLcQTg0xTXDrEtjwnjQs0FXE0dPk3xSULW6eCTFLxirKE6MoRXIW7HlEZqXDseId2JEEACwRkhCKAawIaS8tyKFieHKGaFxRkjgXfuNWf9bwOGRx7xQQGOzJUTJ1amtu76oFqeFBHRHEkYEJyHsVApB4IDRuqGpGSIE0WzPBPYasTw9CTloRqlUogxPcYlV2PmcT7JldCJEWswNj+wot7lc3zO5X+zrDc7iCpBFDI0OUK5kxK3OiyPVuksNRFrsCavSqNQ8OSk7Xjg8d3jUHn73BsjoqoOJx+8cvLESnFeynfnAxxg50+/8g+T23d9UMR8psgZTkSs01wBQUGChIEQhFApFy0pn1GeGGZsZgM4N3CqsdtzyJUkmIIKSxEjeCO9YUt613Tn+AZG3FWxIphyiVKtQrp5lKa2MWG4ZrizS4GPBn6A9BCH5KdqvM8+sHD6lX+AgxbyM4SDJxMdHAgWXnvlb9S7h5FceFQzUK3a/pCkCBgLNoCoJEQhlGulovGYgyhjpDgjMDiY6Hvfi+Zj8up9fny2mAPMMa0vOjfa6+R3waqIENTK2ABMkFPcOQaR4jHCkOluPJnk54Scc/7hhdde+Rs4EHSFX68A4FAGB4KFU69+Bpe9WeGEsTYAlQjNvJfcKn2/a9SbvLRBUUJ71s/aDI7Ji+aCduuHwX6uSn94odue654j6JqFFpgkczkK9C7/2qvinJI61ZIhM4IYYwNVPaHomxdOHf9MLvzag5Pm6qLxUAbYhTMnn0o1uUOd+5QqSSW0QSCI9+p9ps47/EAbpp83CqqpV094D75wC+/7PSrfNfu1HF2PkNXBEzvdAxYe47v0Vi64c6ouh/tOFW8RqYc2EJFEffapVJM7Fk4efyr3+bXC50NSr//jALt86tTSCvzzcNPuPy7hPtbI9D1Va2dCK3gDHslnfjyQuYGmpO91kHPLF8Rq3ibvCtgbXR0gYrzvnRphYGBbBxTi1aNZPpTlFKwYMTlNSOYh9u68xT+apPxR4+KrRwYOiP7TD0+v+950b37soenJicC+VYw8KIb9XmQrYsZQZ6pT40zesi9Pe6ZLSvZn6qXoIYIpToxKf2q7exija+q9SlR6o/tasNMShCwcPsrqa+cgiLx6XRTltBj5Id4/saTua+/+4oWFAcF/7PH5/wfItF7V2bmeGQAAAABJRU5ErkJggg==">
+<style>
+:root {
+    --bg: #1A252B; --surface: #243139; --surface-2: #2E3D47;
+    --primary: #EF8B34; --primary-light: #F6A858;
+    --secondary: #4CAF6E; --danger: #E5533D;
+    --warning: #F6A858; --gold: #F8C55E;
+    --text: #FFFFFF; --text-muted: #9FB0BA;
+    --border: #3B4C57; --shadow: rgba(0,0,0,.45);
+}
+body.light {
+    --bg: #F1F5F9; --surface: #FFFFFF; --surface-2: #F8FAFC;
+    --text: #0F172A; --text-muted: #64748B;
+    --border: #E2E8F0; --shadow: rgba(0,0,0,.1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+body { background: var(--bg); color: var(--text); padding-bottom: 90px; transition: background .2s, color .2s; }
+button { font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+#lockScreen { position: fixed; inset: 0; z-index: 999; background: var(--bg); display: none; flex-direction: column; align-items: center; justify-content: center; padding: 30px; }
+#lockScreen.show { display: flex; }
+#lockScreen .logo-lock { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; font-size: 44px; margin-bottom: 20px; }
+#lockScreen h2 { margin-bottom: 6px; }
+#lockScreen p { color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
+#pinInput { width: 180px; padding: 14px; text-align: center; font-size: 28px; letter-spacing: 12px; background: var(--surface); border: 2px solid var(--border); border-radius: 12px; color: var(--text); margin-bottom: 12px; }
+#pinInput:focus { outline: none; border-color: var(--primary); }
+.btn-lock { padding: 12px 30px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; }
+
+.header { background: var(--surface); padding: 14px 16px 16px; border-bottom: 3px solid var(--primary); position: sticky; top: 0; z-index: 30; }
+.header-row { display: flex; align-items: center; gap: 12px; }
+.logo-container { width: 46px; height: 46px; flex: 0 0 46px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(230,126,34,.4); }
+.logo-container svg { width: 30px; height: 30px; }
+.header-text { flex: 1; }
+.header-text h1 { font-size: 17px; font-weight: bold; }
+.header-text .tagline { font-size: 11px; color: var(--text-muted); }
+.header-icon-btn { background: transparent; border: none; color: var(--text-muted); width: 40px; height: 40px; border-radius: 10px; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+.header-icon-btn:active { background: var(--surface-2); }
+.header-icon-btn.active { color: var(--primary); }
+
+#alertas { padding: 12px 15px 0; }
+.alerta { display: flex; gap: 10px; align-items: flex-start; padding: 11px 13px; border-radius: 12px; margin-bottom: 8px; background: rgba(243,156,18,.12); border: 1px solid var(--warning); }
+.alerta.vencido { background: rgba(231,76,60,.14); border-color: var(--danger); }
+.alerta.info { background: rgba(39,174,96,.12); border-color: var(--secondary); }
+.alerta-icon { font-size: 18px; line-height: 1.2; }
+.alerta-body { flex: 1; min-width: 0; }
+.alerta-title { font-weight: bold; font-size: 13px; }
+.alerta-sub { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+.alerta-actions { display: flex; gap: 6px; margin-top: 8px; }
+.alerta-actions button { padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: bold; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); cursor: pointer; }
+.alerta-actions button.pri { background: var(--primary); border-color: var(--primary); color: white; }
+
+.card { background: var(--surface); border-radius: 12px; padding: 14px; margin-bottom: 12px; border: 1px solid var(--border); }
+.card h3 { font-size: 12px; margin-bottom: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .6px; font-weight: 700; }
+
+.tasa-card { background: var(--surface); margin: 12px 15px; padding: 13px 15px; border-radius: 12px; border-left: 4px solid var(--primary); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.tasa-info { flex: 1; min-width: 0; }
+.tasa-label { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 5px; }
+.tasa-val { font-size: 18px; font-weight: bold; color: var(--secondary); margin-top: 4px; }
+.tasa-val.manual { color: var(--warning); }
+.tasa-actions { display: flex; gap: 6px; }
+.tasa-btn { background: var(--primary); border: none; color: white; padding: 9px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.tasa-btn.sec { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); }
+
+.resumen-card { background: var(--surface); margin: 0 15px 12px; padding: 14px; border-radius: 12px; display: flex; align-items: center; border: 1px solid var(--border); }
+.resumen-item { text-align: center; flex: 1; min-width: 0; }
+.resumen-label { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .4px; }
+.resumen-value { font-size: 16px; font-weight: bold; }
+.resumen-value.usd { color: var(--secondary); }
+.resumen-value.bs { color: var(--primary); }
+.resumen-value.neg { color: var(--danger); }
+.resumen-div { width: 1px; height: 32px; background: var(--border); margin: 0 6px; }
+
+.tabs { display: flex; margin: 0 15px; background: var(--surface); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+.tab { flex: 1; padding: 11px 2px; text-align: center; background: transparent; border: none; color: var(--text-muted); font-weight: 700; cursor: pointer; font-size: 12px; transition: .15s; white-space: nowrap; }
+.tab .tab-icon { display: block; font-size: 17px; margin-bottom: 2px; }
+.tab.active { background: var(--primary); color: white; }
+
+.section { display: none; padding: 14px 15px 20px; }
+.section.active { display: block; animation: fadeIn .2s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.search-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0 12px; }
+.search-bar input { flex: 1; padding: 11px 0; background: transparent; border: none; color: var(--text); font-size: 14px; }
+.search-bar input:focus { outline: none; }
+.search-bar .search-icon { color: var(--text-muted); font-size: 16px; }
+.chips { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: 0 0 auto; padding: 7px 13px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); color: var(--text-muted); font-size: 12px; font-weight: 600; cursor: pointer; }
+.chip.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+.item-card { background: var(--surface); padding: 13px; border-radius: 12px; margin-bottom: 9px; border-left: 4px solid var(--secondary); position: relative; border: 1px solid var(--border); border-left-width: 4px; overflow: hidden; }
+.item-card.urgente { border-left-color: var(--warning); }
+.item-card.vencido { border-left-color: var(--danger); }
+.item-card.completado { opacity: .7; }
+.item-card .row-actions { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.item-card .row-actions button { background: var(--surface-2); border: 1px solid var(--border); color: var(--text-muted); padding: 5px 10px; border-radius: 7px; font-size: 11px; font-weight: 600; cursor: pointer; }
+.item-card .row-actions button.danger { color: var(--danger); border-color: rgba(231,76,60,.3); }
+.item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+.item-title { font-weight: 700; font-size: 15px; padding-right: 28px; word-break: break-word; }
+.item-monto { font-weight: 700; color: var(--primary); font-size: 16px; white-space: nowrap; }
+.item-sub { font-size: 11px; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.badge { display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 6px; font-size: 10px; font-weight: 600; background: var(--surface-2); border: 1px solid var(--border); }
+.delete-btn { position: absolute; top: 9px; right: 9px; background: rgba(231,76,60,.12); border: none; color: var(--danger); width: 26px; height: 26px; border-radius: 50%; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.delete-btn:active { background: var(--danger); color: white; }
+
+.fecha-header { font-size: 11px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin: 14px 0 7px; display: flex; justify-content: space-between; }
+.fecha-header:first-child { margin-top: 0; }
+
+.progress { height: 8px; background: var(--bg); border-radius: 5px; overflow: hidden; margin: 10px 0 5px; }
+.progress-bar { height: 100%; background: linear-gradient(90deg, var(--secondary), #2ecc71); border-radius: 5px; transition: width .4s; }
+.progress-bar.warn { background: linear-gradient(90deg, var(--warning), var(--gold)); }
+.progress-bar.danger { background: linear-gradient(90deg, var(--danger), #c0392b); }
+.progress-txt { font-size: 11px; color: var(--text-muted); display: flex; justify-content: space-between; }
+
+.pagos-lista { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 8px; }
+.pago-row { display: flex; align-items: center; gap: 10px; padding: 8px 2px; border-bottom: 1px solid var(--border); }
+.pago-row:last-child { border-bottom: none; }
+.pago-row.pagado { opacity: .55; }
+.pago-row.pagado .pago-nombre { text-decoration: line-through; }
+.check { width: 24px; height: 24px; flex: 0 0 24px; border-radius: 50%; border: 2px solid var(--border); background: transparent; color: transparent; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.check.on { background: var(--secondary); border-color: var(--secondary); color: white; }
+.pago-info { flex: 1; min-width: 0; }
+.pago-nombre { font-size: 12px; font-weight: 600; }
+.pago-fecha { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+.pago-monto { font-size: 13px; font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+.fab { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; border: none; box-shadow: 0 4px 14px var(--shadow); cursor: pointer; z-index: 60; transition: transform .2s; }
+.fab.open { transform: rotate(45deg); }
+.fab-menu { position: fixed; bottom: 86px; right: 20px; z-index: 59; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; opacity: 0; pointer-events: none; transform: translateY(12px); transition: .2s; }
+.fab-menu.open { opacity: 1; pointer-events: auto; transform: none; }
+.fab-menu button { background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 11px 16px; border-radius: 30px; font-size: 13px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px var(--shadow); white-space: nowrap; }
+
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75); z-index: 100; align-items: flex-end; }
+.modal.open { display: flex; }
+.modal-content { background: var(--surface); width: 100%; padding: 18px; border-radius: 20px 20px 0 0; max-height: 92vh; overflow-y: auto; animation: slideUp .28s ease; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: none; } }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.modal-header h3 { font-size: 18px; }
+.close-modal { background: none; border: none; color: var(--text-muted); font-size: 24px; cursor: pointer; line-height: 1; padding: 0 4px; }
+
+.form-group { margin-bottom: 13px; }
+.form-group label { display: block; color: var(--text-muted); font-size: 12px; margin-bottom: 5px; font-weight: 600; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 9px; color: var(--text); font-size: 15px; }
+.form-group textarea { resize: vertical; min-height: 60px; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+.row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.hint { font-size: 11px; color: var(--text-muted); margin-top: 5px; line-height: 1.4; }
+.hint b { color: var(--secondary); }
+.checkbox-row { display: flex; align-items: center; gap: 9px; padding: 9px 11px; background: var(--bg); border-radius: 9px; border: 1px solid var(--border); margin-bottom: 11px; }
+.checkbox-row input { width: auto; margin: 0; }
+.checkbox-row label { margin: 0; font-size: 13px; color: var(--text); text-transform: none; letter-spacing: 0; }
+
+.btn-primary { width: 100%; padding: 13px; background: var(--primary); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 6px; }
+.btn-primary:active { background: var(--primary-light); }
+.btn-secondary { width: 100%; padding: 11px; background: var(--surface-2); color: var(--text); border: 1px solid var(--border); border-radius: 9px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 7px; }
+.btn-danger { width: 100%; padding: 11px; background: transparent; color: var(--danger); border: 1px solid var(--danger); border-radius: 9px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 7px; }
+.btn-mini { background: var(--surface-2); border: 1px solid var(--border); color: var(--text); padding: 7px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; cursor: pointer; }
+.btn-mini.primary { background: var(--primary); border-color: var(--primary); color: white; }
+.btn-mini.danger { color: var(--danger); border-color: rgba(231,76,60,.3); }
+
+.categorias-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px; }
+.categoria-item { padding: 8px 3px; background: var(--bg); border: 2px solid var(--border); border-radius: 9px; text-align: center; cursor: pointer; font-size: 10px; color: var(--text); line-height: 1.2; transition: all .15s; }
+.categoria-item.selected { background: var(--primary); border-color: var(--primary); color: white; }
+.categoria-icon { font-size: 18px; display: block; margin-bottom: 2px; }
+
+.empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+.empty-state .icon { font-size: 44px; margin-bottom: 10px; opacity: .5; }
+.empty-state p { font-size: 13px; }
+
+.chart-donut { display: flex; justify-content: center; margin: 6px 0 12px; }
+.chart-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; padding: 5px 7px; background: var(--bg); border-radius: 7px; }
+.legend-dot { width: 9px; height: 9px; border-radius: 3px; flex: 0 0 9px; }
+.legend-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.legend-val { font-weight: 700; color: var(--text); font-size: 11px; }
+
+.cat-row { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+.cat-ico { font-size: 16px; width: 22px; text-align: center; }
+.cat-info { flex: 1; min-width: 0; }
+.cat-top { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px; gap: 6px; }
+.cat-top span:last-child { font-weight: 700; white-space: nowrap; }
+.cat-bar { height: 5px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+.cat-bar div { height: 100%; border-radius: 4px; transition: width .4s; }
+
+.big-total { font-size: 26px; font-weight: 800; color: var(--primary); line-height: 1; }
+.big-total small { font-size: 12px; color: var(--text-muted); font-weight: normal; display: block; margin-top: 6px; }
+
+.settings-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); gap: 10px; }
+.settings-row:last-child { border-bottom: none; }
+.settings-label { font-size: 13px; font-weight: 600; }
+.settings-desc { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.settings-row select, .settings-row input[type="number"] { width: auto; min-width: 70px; padding: 7px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; }
+.switch { position: relative; width: 44px; height: 24px; flex: 0 0 44px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.switch .slider { position: absolute; cursor: pointer; inset: 0; background: var(--border); border-radius: 24px; transition: .2s; }
+.switch .slider:before { content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: .2s; }
+.switch input:checked + .slider { background: var(--primary); }
+.switch input:checked + .slider:before { transform: translateX(20px); }
+
+body.privacy .monto-privado { filter: blur(6px); user-select: none; transition: filter .2s; }
+body.privacy .monto-privado:active { filter: none; }
+
+#toast { position: fixed; left: 50%; bottom: 100px; transform: translate(-50%, 20px); background: #0f172a; color: white; padding: 11px 18px; border-radius: 30px; font-size: 13px; font-weight: 600; z-index: 200; opacity: 0; pointer-events: none; transition: .25s; border: 1px solid var(--border); max-width: 88%; text-align: center; }
+body.light #toast { background: #0F172A; color: white; }
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+#toast.ok { border-color: var(--secondary); }
+#toast.err { border-color: var(--danger); }
+
+.meta-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 11px; padding: 12px; margin-bottom: 9px; }
+.hidden { display: none !important; }
+
+.mes-picker { display: flex; gap: 6px; align-items: center; margin-bottom: 12px; }
+.mes-picker input { flex: 1; padding: 11px; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; color: var(--text); font-size: 14px; }
+
+@media (max-width: 360px) {
+    .tab { font-size: 11px; }
+    .tab .tab-icon { font-size: 15px; }
+    .header-text h1 { font-size: 15px; }
+}
+
+/* ===== Mejora visual ===== */
+.ico { width: 1em; height: 1em; display: inline-block; vertical-align: -.15em; }
+.tab .tab-icon .ico { width: 20px; height: 20px; }
+.header-icon-btn .ico { width: 22px; height: 22px; }
+.tasa-btn .ico { width: 17px; height: 17px; vertical-align: middle; }
+body { background: radial-gradient(900px 420px at 50% -120px, rgba(230,126,34,.16), transparent 70%) var(--bg) no-repeat; font-variant-numeric: tabular-nums; }
+body.light { background: var(--bg); }
+.header { background: linear-gradient(180deg, var(--surface), var(--bg)); border-bottom: 1px solid var(--border); box-shadow: 0 6px 18px -10px var(--shadow); backdrop-filter: blur(8px); }
+.header-text h1 { letter-spacing: .3px; }
+.logo-container { width: 48px; height: 48px; flex-basis: 48px; border: 2px solid rgba(255,255,255,.25); }
+.logo-container svg { width: 36px; height: 36px; }
+#lockScreen { background: radial-gradient(600px 400px at 50% 25%, rgba(230,126,34,.22), transparent 70%) var(--bg); }
+#lockScreen .logo-lock { width: 112px; height: 112px; box-shadow: 0 0 0 8px rgba(230,126,34,.15), 0 12px 30px rgba(230,126,34,.35); }
+#lockScreen .logo-lock svg { width: 82px; height: 82px; }
+#lockScreen h2 { font-size: 26px; letter-spacing: .5px; }
+.btn-lock { box-shadow: 0 6px 16px rgba(230,126,34,.35); }
+.tasa-card, .resumen-card, .tabs, .card, .item-card { box-shadow: 0 4px 14px -8px var(--shadow); }
+.tasa-card { border-radius: 16px; }
+.tasa-val { font-size: 22px; letter-spacing: .3px; }
+.tasa-btn { width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+.resumen-card { border-radius: 16px; padding: 16px 12px; }
+.resumen-value { font-size: 18px; }
+.tabs { border-radius: 16px; padding: 4px; gap: 4px; }
+.tab { border-radius: 12px; padding: 9px 2px; }
+.tab.active { background: linear-gradient(135deg, var(--primary), var(--primary-light)); box-shadow: 0 4px 12px rgba(230,126,34,.35); }
+.item-card { border-radius: 14px; padding: 14px; }
+.item-monto { font-size: 17px; }
+.chip.active { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+.fab { width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); box-shadow: 0 8px 22px rgba(230,126,34,.45); }
+.empty-state .icon { opacity: .9; }
+button:active { transform: scale(.97); }
+
+/* ===== Identidad: logo oficial ===== */
+.lapa-img { background: url(data:image/webp;base64,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) center/contain no-repeat !important; border-radius: 24%; }
+.logo-container.lapa-img { width: 50px; height: 50px; flex-basis: 50px; border: none; box-shadow: 0 4px 12px rgba(0,0,0,.4); }
+#lockScreen .logo-lock.lapa-img { width: 140px; height: 140px; box-shadow: 0 14px 34px rgba(0,0,0,.5), 0 0 0 1px rgba(239,139,52,.25); }
+.empty-state .icon .lapa-img { box-shadow: none; opacity: .95; }
+.header { border-bottom: 2px solid rgba(239,139,52,.55); }
+.tasa-card { border-left-color: var(--primary); }
+.tasa-label, .fecha-header { color: #F8D9A6; opacity: .85; }
+.tab.active, .chip.active, .fab { background: linear-gradient(135deg, #EF8B34, #E9802C); }
+.btn-lock, .btn-primary { background: linear-gradient(135deg, #F6A858, #EF8B34); color: #2A1608; }
+
+.resumen-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.header { padding-top: calc(14px + env(safe-area-inset-top, 0px)); }
+body { padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+.fab { bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+.modal-content { padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-gastos" viewBox="0 0 24 24"><path d="M7 7l10 10M17 9v8H9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-deudas" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 11h18M7 15h3"/></g></symbol>
+<symbol id="i-ingresos" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-resumen" viewBox="0 0 24 24"><path d="M6 20V11M12 20V5M18 20v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 10-2.3 5.7M20 5v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div id="lockScreen">
+    <div class="logo-lock lapa-img"></div>
+    <h2>Lapa App</h2>
+    <p>Ingresa tu PIN para continuar</p>
+    <input type="password" id="pinInput" inputmode="numeric" maxlength="6" placeholder="••••">
+    <button class="btn-lock" onclick="desbloquear()">Desbloquear</button>
+    <p style="margin-top:14px; font-size:11px;">Olvidé el PIN — se requiere borrar datos</p>
+</div>
+
+<div class="header" id="header">
+    <div class="header-row">
+        <div class="logo-container lapa-img"></div>
+        <div class="header-text">
+            <h1>Lapa App</h1>
+            <div class="tagline">Tus cuentas y deudas bajo control</div>
+        </div>
+        <button class="header-icon-btn" id="privacyBtn" onclick="togglePrivacidad()" title="Modo privacidad"><svg class="ico"><use href="#i-eye"/></svg></button>
+        <button class="header-icon-btn" onclick="abrirConfig()" title="Configuración"><svg class="ico"><use href="#i-gear"/></svg></button>
+    </div>
+</div>
+
+<div id="alertas"></div>
+
+<div class="tasa-card">
+    <div class="tasa-info">
+        <div class="tasa-label">💱 Tasa BCV del día</div>
+        <div class="tasa-val" id="tasaDisplay">Cargando...</div>
+    </div>
+    <div class="tasa-actions">
+        <button class="tasa-btn sec" onclick="abrirTasaManual()" title="Tasa manual"><svg class="ico"><use href="#i-edit"/></svg></button>
+        <button class="tasa-btn" onclick="cargarTasa(true)" title="Actualizar desde BCV"><svg class="ico"><use href="#i-refresh"/></svg></button>
+    </div>
+</div>
+
+<div class="resumen-card">
+    <div class="resumen-item">
+        <div class="resumen-label">Gastos hoy</div>
+        <div class="resumen-value usd monto-privado" id="resumenGastosUSD">$0.00</div>
+    </div>
+    <div class="resumen-div"></div>
+    <div class="resumen-item">
+        <div class="resumen-label">Ingresos hoy</div>
+        <div class="resumen-value usd monto-privado" id="resumenIngresosUSD">$0.00</div>
+    </div>
+    <div class="resumen-div"></div>
+    <div class="resumen-item">
+        <div class="resumen-label">Disponible</div>
+        <div class="resumen-value bs monto-privado" id="resumenBalanceUSD">$0.00</div>
+        <div class="resumen-sub monto-privado" id="resumenBalanceBs"></div>
+    </div>
+</div>
+
+<div class="tabs">
+    <button class="tab active" data-tab="gastos" onclick="cambiarTab('gastos', this)">
+        <span class="tab-icon"><svg class="ico"><use href="#i-gastos"/></svg></span>Gastos
+    </button>
+    <button class="tab" data-tab="deudas" onclick="cambiarTab('deudas', this)">
+        <span class="tab-icon"><svg class="ico"><use href="#i-deudas"/></svg></span>Deudas
+    </button>
+    <button class="tab" data-tab="ingresos" onclick="cambiarTab('ingresos', this)">
+        <span class="tab-icon"><svg class="ico"><use href="#i-ingresos"/></svg></span>Ingresos
+    </button>
+    <button class="tab" data-tab="resumen" onclick="cambiarTab('resumen', this)">
+        <span class="tab-icon"><svg class="ico"><use href="#i-resumen"/></svg></span>Resumen
+    </button>
+</div>
+
+<div id="sec-gastos" class="section active">
+    <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="buscarGastos" placeholder="Buscar gasto..." oninput="renderGastos()">
+    </div>
+    <div class="chips">
+        <button class="chip active" data-filtro="hoy" onclick="setFiltro('hoy', this)">Hoy</button>
+        <button class="chip" data-filtro="semana" onclick="setFiltro('semana', this)">7 días</button>
+        <button class="chip" data-filtro="mes" onclick="setFiltro('mes', this)">Este mes</button>
+        <button class="chip" data-filtro="todo" onclick="setFiltro('todo', this)">Todo</button>
+    </div>
+    <div id="totalGastos" class="hint" style="margin-bottom:8px;"></div>
+    <div id="lista-gastos"></div>
+</div>
+
+<div id="sec-deudas" class="section">
+    <div class="card" style="padding:11px 13px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <div style="font-size:12px; color:var(--text-muted);">🔔 Recordarme antes de cada pago</div>
+            <select id="diasAviso" onchange="cambiarDiasAviso(this.value)"
+                    style="width:auto; padding:7px 10px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:12px;">
+                <option value="1">1 día</option>
+                <option value="2">2 días</option>
+                <option value="3">3 días</option>
+                <option value="5">5 días</option>
+                <option value="7">7 días</option>
+            </select>
+        </div>
+    </div>
+    <div class="card" style="padding:11px 13px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+            <div style="font-size:12px; color:var(--text-muted);">Estrategia de pago</div>
+            <select id="estrategia" onchange="cambiarEstrategia(this.value)"
+                    style="width:auto; padding:7px 10px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:12px;">
+                <option value="ninguna">Ninguna</option>
+                <option value="bola">Bola de nieve (menor saldo)</option>
+                <option value="avalancha">Avalancha (mayor interés)</option>
+            </select>
+        </div>
+        <div class="hint" id="estrategiaHint" style="margin-top:8px;"></div>
+    </div>
+    <div id="totalDeudas" class="hint" style="margin-bottom:8px;"></div>
+    <div id="lista-deudas"></div>
+</div>
+
+<div id="sec-ingresos" class="section">
+    <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="buscarIngresos" placeholder="Buscar ingreso..." oninput="renderIngresos()">
+    </div>
+    <div id="totalIngresos" class="hint" style="margin-bottom:8px;"></div>
+    <div id="lista-ingresos"></div>
+</div>
+
+<div id="sec-resumen" class="section">
+    <div class="mes-picker">
+        <button class="btn-mini" onclick="cambiarMes(-1)">◀</button>
+        <input type="month" id="mesResumen" onchange="renderResumen()">
+        <button class="btn-mini" onclick="cambiarMes(1)">▶</button>
+    </div>
+    <div id="resumenContenido"></div>
+</div>
+
+<div class="fab-menu" id="fabMenu">
+    <button onclick="abrirModal('gasto')">💸 Nuevo gasto</button>
+    <button onclick="abrirModal('ingreso')">💰 Nuevo ingreso</button>
+    <button onclick="abrirModal('deuda')">💳 Nueva deuda</button>
+    <button onclick="abrirPlantillas()">📋 Desde plantilla</button>
+    <button onclick="abrirModal('meta')">🎯 Nueva meta</button>
+</div>
+<button class="fab" id="fab" onclick="toggleFab()">+</button>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Nuevo Registro</h3>
+            <button class="close-modal" onclick="cerrarModal()">✕</button>
+        </div>
+
+        <div id="form-gastos" class="hidden">
+            <div class="form-group">
+                <label>Descripción</label>
+                <input type="text" id="gasto-nombre" placeholder="Ej: Almuerzo, Gasolina">
+            </div>
+            <div class="form-group">
+                <label>Categoría</label>
+                <div class="categorias-grid" id="categoriasGrid"></div>
+            </div>
+            <div class="row-2">
+                <div class="form-group">
+                    <label>Monto</label>
+                    <input type="number" id="gasto-monto" placeholder="0.00" step="0.01" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label>Moneda</label>
+                    <select id="gasto-moneda" onchange="actualizarPreviewGasto()">
+                        <option value="USD">USD ($)</option>
+                        <option value="BS">Bolívares</option>
+                    </select>
+                </div>
+            </div>
+            <div class="checkbox-row">
+                <input type="checkbox" id="gasto-igtf" onchange="actualizarPreviewGasto()">
+                <label for="gasto-igtf">Aplicar IGTF 3% (pago en divisa)</label>
+            </div>
+            <div class="form-group">
+                <label>Fecha del gasto</label>
+                <input type="date" id="gasto-fecha" onchange="actualizarTasaForm(true)">
+            </div>
+            <div class="form-group">
+                <label>Tasa BCV para esa fecha</label>
+                <div id="tasaFechaInfo" class="hint" style="margin-bottom:5px;"></div>
+                <input type="text" id="gasto-tasa-fecha" placeholder="Bs/USD" inputmode="decimal" autocomplete="off" oninput="actualizarPreviewGasto()">
+            </div>
+            <div class="form-group">
+                <label>Notas (opcional)</label>
+                <input type="text" id="gasto-notas" placeholder="Ej: cena con amigos">
+            </div>
+            <div id="previewGasto" class="hint" style="margin-bottom:10px;"></div>
+            <button class="btn-primary" onclick="guardarGasto()">Guardar gasto</button>
+            <button class="btn-secondary" onclick="guardarComoPlantilla()">💾 Guardar como plantilla</button>
+        </div>
+
+        <div id="form-ingresos" class="hidden">
+            <div class="form-group">
+                <label>Descripción</label>
+                <input type="text" id="ingreso-nombre" placeholder="Ej: Sueldo enero">
+            </div>
+            <div class="form-group">
+                <label>Fuente</label>
+                <select id="ingreso-fuente">
+                    <option value="sueldo">💼 Sueldo</option>
+                    <option value="bonos">🎁 Bonos / Aguinaldos</option>
+                    <option value="remesas">💵 Remesas</option>
+                    <option value="freelance">💻 Freelance</option>
+                    <option value="ventas">🛒 Ventas</option>
+                    <option value="intereses">📈 Intereses</option>
+                    <option value="otros">📦 Otros</option>
+                </select>
+            </div>
+            <div class="row-2">
+                <div class="form-group">
+                    <label>Monto</label>
+                    <input type="number" id="ingreso-monto" placeholder="0.00" step="0.01" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label>Moneda</label>
+                    <select id="ingreso-moneda">
+                        <option value="USD">USD ($)</option>
+                        <option value="BS">Bolívares</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Fecha</label>
+                <input type="date" id="ingreso-fecha" onchange="actualizarTasaIngreso(true)">
+            </div>
+            <div class="form-group">
+                <label>Tasa BCV para esa fecha</label>
+                <div id="tasaIngresoInfo" class="hint" style="margin-bottom:5px;"></div>
+                <input type="text" id="ingreso-tasa" placeholder="Bs/USD" inputmode="decimal" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label>Notas (opcional)</label>
+                <input type="text" id="ingreso-notas" placeholder="Ej: pago quincena">
+            </div>
+            <button class="btn-primary" onclick="guardarIngreso()">Guardar ingreso</button>
+        </div>
+
+        <div id="form-deudas" class="hidden">
+            <div class="form-group">
+                <label>Nombre de la deuda / app</label>
+                <input type="text" id="deuda-nombre" placeholder="Ej: Cashea, PrestaFácil, Tarjeta">
+            </div>
+            <div class="row-2">
+                <div class="form-group">
+                    <label>Monto total (USD)</label>
+                    <input type="number" id="deuda-total" placeholder="0.00" step="0.01" inputmode="decimal" oninput="previewDeuda()">
+                </div>
+                <div class="form-group">
+                    <label>Interés % (opcional)</label>
+                    <input type="number" id="deuda-interes" placeholder="0" step="0.1" inputmode="decimal" oninput="previewDeuda()">
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="form-group">
+                    <label>N° de cuotas</label>
+                    <input type="number" id="deuda-ncuotas" placeholder="4" min="1" max="60" inputmode="numeric" oninput="previewDeuda()">
+                </div>
+                <div class="form-group">
+                    <label>Frecuencia</label>
+                    <select id="deuda-frecuencia" onchange="previewDeuda()">
+                        <option value="semanal">Semanal</option>
+                        <option value="quincenal" selected>Quincenal</option>
+                        <option value="mensual">Mensual</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Fecha del primer pago</label>
+                <input type="date" id="deuda-fecha" onchange="previewDeuda()">
+            </div>
+            <div class="form-group">
+                <label>Notas (opcional)</label>
+                <input type="text" id="deuda-notas" placeholder="Ej: compra de teléfono">
+            </div>
+            <div class="hint" id="previewDeuda" style="margin-bottom:10px;"></div>
+            <button class="btn-primary" onclick="guardarDeuda()">Guardar deuda</button>
+        </div>
+
+        <div id="form-metas" class="hidden">
+            <div class="form-group">
+                <label>Nombre de la meta</label>
+                <input type="text" id="meta-nombre" placeholder="Ej: Fondo emergencia, Viaje">
+            </div>
+            <div class="row-2">
+                <div class="form-group">
+                    <label>Monto objetivo (USD)</label>
+                    <input type="number" id="meta-objetivo" placeholder="500" step="0.01" inputmode="decimal">
+                </div>
+                <div class="form-group">
+                    <label>Monto actual (USD)</label>
+                    <input type="number" id="meta-actual" placeholder="0" step="0.01" inputmode="decimal">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Fecha límite (opcional)</label>
+                <input type="date" id="meta-fecha">
+            </div>
+            <button class="btn-primary" onclick="guardarMeta()">Guardar meta</button>
+        </div>
+    </div>
+</div>
+
+<div id="modalConfig" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>⚙️ Configuración</h3>
+            <button class="close-modal" onclick="cerrarConfig()">✕</button>
+        </div>
+
+        <div class="card" style="margin-top:0;">
+            <h3>Apariencia</h3>
+            <div class="settings-row">
+                <div>
+                    <div class="settings-label">Modo claro</div>
+                    <div class="settings-desc">Cambia entre tema claro y oscuro</div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" onchange="toggleTema(this.checked)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="settings-row">
+                <div>
+                    <div class="settings-label">Modo privacidad</div>
+                    <div class="settings-desc">Oculta los montos con blur</div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="privacyToggle" onchange="togglePrivacidad(this.checked)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Seguridad</h3>
+            <div class="settings-row">
+                <div>
+                    <div class="settings-label">PIN de bloqueo</div>
+                    <div class="settings-desc">Pide un PIN al abrir la app</div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="pinToggle" onchange="togglePin(this.checked)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <button class="btn-secondary" id="btnCambiarPin" onclick="cambiarPin()" style="display:none;">Cambiar PIN</button>
+        </div>
+
+        <div class="card">
+            <h3>Notificaciones</h3>
+            <div class="settings-row">
+                <div>
+                    <div class="settings-label">Recordatorios</div>
+                    <div class="settings-desc" id="notifDesc">Avisos de pagos próximos</div>
+                </div>
+                <button class="btn-mini primary" id="notifBtn" onclick="activarNotificaciones()">Activar</button>
+            </div>
+            <button class="btn-secondary" onclick="exportarICS()">📅 Exportar calendario (.ics)</button>
+            <button class="btn-secondary" onclick="probarNotificacion()">🔔 Probar notificación</button>
+        </div>
+
+        <div class="card">
+            <h3>Datos y respaldo</h3>
+            <button class="btn-secondary" onclick="exportarDatos()">⬇️ Exportar respaldo (JSON)</button>
+            <button class="btn-secondary" onclick="document.getElementById('importFile').click()">⬆️ Importar respaldo</button>
+            <button class="btn-secondary" onclick="exportarCSV()">📊 Exportar gastos a CSV</button>
+            <button class="btn-secondary" onclick="compartirResumen()">📤 Compartir resumen</button>
+            <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importarDatos(event)">
+        </div>
+
+        <div class="card">
+            <h3>Papelera</h3>
+            <div id="papeleraContenido"></div>
+        </div>
+
+        <div class="card">
+            <h3>Zona peligrosa</h3>
+            <button class="btn-danger" onclick="borrarTodo()">🗑 Borrar todos los datos</button>
+        </div>
+
+        <div class="card">
+            <h3>Acerca de</h3>
+            <p style="font-size:12px; color:var(--text-muted); line-height:1.6;">
+                <b style="color:var(--text);">Lapa App v2.2</b><br>
+                Todos tus datos se guardan localmente en tu dispositivo.
+                No se envía información a ningún servidor.
+                Haz respaldos periódicos desde aquí.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="modalTasa" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Tasa BCV manual</h3>
+            <button class="close-modal" onclick="cerrarTasaManual()">✕</button>
+        </div>
+        <div class="form-group">
+            <label>Valor en Bs/USD</label>
+            <input type="text" id="tasaManualInput" placeholder="Ej: 36,50" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label>Aplicar a la fecha</label>
+            <input type="date" id="tasaManualFecha" onchange="actualizarTasaManualFecha()">
+            <div id="tasaManualInfo" class="hint" style="margin-top:6px;"></div>
+        </div>
+        <button class="btn-primary" onclick="guardarTasaManual()">Guardar tasa</button>
+        <button class="btn-secondary" onclick="cerrarTasaManual()">Cancelar</button>
+    </div>
+</div>
+
+<div id="modalPlantillas" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📋 Plantillas guardadas</h3>
+            <button class="close-modal" onclick="cerrarPlantillas()">✕</button>
+        </div>
+        <div id="listaPlantillas"></div>
+    </div>
+</div>
+
+<div id="modalPagoParcial" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Abono parcial</h3>
+            <button class="close-modal" onclick="cerrarPagoParcial()">✕</button>
+        </div>
+        <div class="form-group">
+            <label>Monto del abono (USD)</label>
+            <input type="number" id="abonoMonto" placeholder="0.00" step="0.01" inputmode="decimal">
+        </div>
+        <div class="hint" id="abonoInfo" style="margin-bottom:10px;"></div>
+        <button class="btn-primary" onclick="confirmarAbono()">Registrar abono</button>
+    </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
+const $ = id => document.getElementById(id);
+
+function hoyISO() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function sumarDias(fechaISO, dias) {
+    const d = new Date(fechaISO + 'T12:00:00');
+    d.setDate(d.getDate() + dias);
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function sumarMeses(fechaISO, meses) {
+    const d = new Date(fechaISO + 'T12:00:00');
+    const dia = d.getDate();
+    d.setDate(1);
+    d.setMonth(d.getMonth() + meses);
+    const ultimo = new Date(d.getFullYear(), d.getMonth()+1, 0).getDate();
+    d.setDate(Math.min(dia, ultimo));
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function diasHasta(fechaISO) {
+    const hoy = new Date(); hoy.setHours(0,0,0,0);
+    const f = new Date(fechaISO + 'T00:00:00');
+    return Math.round((f - hoy) / 86400000);
+}
+function formatearFecha(f) {
+    if (!f) return '';
+    const d = new Date(f + 'T12:00:00');
+    return d.toLocaleDateString('es-VE', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+function etiquetaDia(f) {
+    const h = hoyISO();
+    if (f === h) return 'Hoy';
+    if (f === sumarDias(h, -1)) return 'Ayer';
+    const d = new Date(f + 'T12:00:00');
+    const txt = d.toLocaleDateString('es-VE', { weekday: 'long', day: 'numeric', month: 'long' });
+    return txt.charAt(0).toUpperCase() + txt.slice(1);
+}
+/* Acepta '866,56' y '866.56' (teclados Android en español usan coma) */
+function parseNum(v) {
+    const n = parseFloat(String(v ?? '').trim().replace(/\s/g, '').replace(',', '.'));
+    return isNaN(n) ? 0 : n;
+}
+function esc(s) {
+    return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+let toastTimer;
+function toast(msg, tipo = '') {
+    const t = $('toast');
+    t.textContent = msg;
+    t.className = 'show ' + tipo;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.className = '', 2600);
+}
+async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+/* =========================================================
+   CATEGORÍAS Y FUENTES
+   ========================================================= */
+const CATEGORIAS_BASE = {
+    comida:     { icon: '🍔', label: 'Comida',     color: '#E74C3C' },
+    transporte: { icon: '🚌', label: 'Transporte', color: '#3498DB' },
+    hogar:      { icon: '🏠', label: 'Hogar',      color: '#9B59B6' },
+    servicios:  { icon: '💡', label: 'Servicios',  color: '#F1C40F' },
+    salud:      { icon: '💊', label: 'Salud',      color: '#1ABC9C' },
+    ocio:       { icon: '🎮', label: 'Ocio',       color: '#F39C12' },
+    educacion:  { icon: '📚', label: 'Educación',  color: '#2980B9' },
+    ropa:       { icon: '👕', label: 'Ropa',       color: '#E91E63' },
+    deudas:     { icon: '💳', label: 'Deudas',     color: '#E67E22' },
+    otros:      { icon: '📦', label: 'Otros',      color: '#95A5A6' }
+};
+
+const FUENTES_INGRESO = {
+    sueldo:    { icon: '💼', label: 'Sueldo' },
+    bonos:     { icon: '🎁', label: 'Bonos' },
+    remesas:   { icon: '💵', label: 'Remesas' },
+    freelance: { icon: '💻', label: 'Freelance' },
+    ventas:    { icon: '🛒', label: 'Ventas' },
+    intereses: { icon: '📈', label: 'Intereses' },
+    otros:     { icon: '📦', label: 'Otros' }
+};
+
+function getCategorias() {
+    return { ...CATEGORIAS_BASE, ...(state.config.categoriaCustom || {}) };
+}
+
+/* =========================================================
+   ESTADO
+   ========================================================= */
+const state = {
+    tasaBCV: parseFloat(localStorage.getItem('lapa_tasa')) || 0,
+    tasasHistorial: JSON.parse(localStorage.getItem('lapa_tasas_historial')) || {},
+    tasasManuales: JSON.parse(localStorage.getItem('lapa_tasas_manuales')) || {},
+    categoriaSeleccionada: 'comida',
+    gastos: JSON.parse(localStorage.getItem('lapa_gastos')) || [],
+    ingresos: JSON.parse(localStorage.getItem('lapa_ingresos')) || [],
+    deudas: JSON.parse(localStorage.getItem('lapa_deudas')) || [],
+    metas: JSON.parse(localStorage.getItem('lapa_metas')) || [],
+    plantillas: JSON.parse(localStorage.getItem('lapa_plantillas')) || [],
+    papelera: JSON.parse(localStorage.getItem('lapa_papelera')) || [],
+    config: JSON.parse(localStorage.getItem('lapa_config')) || {
+        theme: 'dark',
+        privacy: false,
+        diasAviso: 3,
+        notifEnabled: false,
+        pinHash: null,
+        pinEnabled: false,
+        estrategia: 'ninguna',
+        categoriaCustom: {},
+        presupuestos: {}
+    },
+    tab: 'gastos',
+    filtroGastos: 'hoy',
+    deudasAbiertas: new Set(),
+    editandoId: null,
+    editandoTipo: null,
+    pagoParcialContext: null
+};
+
+if (state.tasasManuales[hoyISO()] > 0) state.tasaBCV = state.tasasManuales[hoyISO()];
+if (!state.config.presupuestos) state.config.presupuestos = {};
+if (!state.config.categoriaCustom) state.config.categoriaCustom = {};
+
+let notifRegistro = JSON.parse(localStorage.getItem('lapa_notif_reg')) || {};
+
+function guardar() {
+    localStorage.setItem('lapa_gastos', JSON.stringify(state.gastos));
+    localStorage.setItem('lapa_ingresos', JSON.stringify(state.ingresos));
+    localStorage.setItem('lapa_deudas', JSON.stringify(state.deudas));
+    localStorage.setItem('lapa_metas', JSON.stringify(state.metas));
+    localStorage.setItem('lapa_plantillas', JSON.stringify(state.plantillas));
+    localStorage.setItem('lapa_papelera', JSON.stringify(state.papelera));
+    localStorage.setItem('lapa_config', JSON.stringify(state.config));
+    localStorage.setItem('lapa_tasa', String(state.tasaBCV));
+    localStorage.setItem('lapa_tasas_historial', JSON.stringify(state.tasasHistorial));
+    localStorage.setItem('lapa_tasas_manuales', JSON.stringify(state.tasasManuales));
+    if (typeof programarNotifNativas === 'function') programarNotifNativas();
+}
+function guardarNotifReg() {
+    localStorage.setItem('lapa_notif_reg', JSON.stringify(notifRegistro));
+}
+
+/* =========================================================
+   INICIALIZACIÓN
+   ========================================================= */
+window.addEventListener('load', async () => {
+    aplicarTema(state.config.theme);
+    if (state.config.privacy) document.body.classList.add('privacy');
+
+    if (state.config.pinEnabled && state.config.pinHash) {
+        $('lockScreen').classList.add('show');
+    }
+
+    construirCategorias();
+    $('gasto-fecha').value = hoyISO();
+    $('ingreso-fecha').value = hoyISO();
+    $('deuda-fecha').value = hoyISO();
+    $('diasAviso').value = String(state.config.diasAviso);
+    $('estrategia').value = state.config.estrategia || 'ninguna';
+    $('themeToggle').checked = state.config.theme === 'light';
+    $('privacyToggle').checked = !!state.config.privacy;
+    $('pinToggle').checked = !!state.config.pinEnabled;
+
+    if (state.tasaBCV > 0) mostrarTasa();
+    actualizarEstadoNotif();
+
+    const d = new Date();
+    $('mesResumen').value = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+
+    render();
+    revisarNotificaciones();
+
+    cargarTasa();
+    cargarHistorialTasas();
+
+    setInterval(revisarNotificaciones, 5 * 60 * 1000);
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) { render(); revisarNotificaciones(); }
+    });
+});
+
+/* =========================================================
+   LOCK / PIN
+   ========================================================= */
+async function desbloquear() {
+    const pin = $('pinInput').value.trim();
+    if (!pin) return toast('Ingresa el PIN', 'err');
+    const hash = await sha256(pin);
+    if (hash === state.config.pinHash) {
+        $('lockScreen').classList.remove('show');
+        $('pinInput').value = '';
+    } else {
+        toast('PIN incorrecto', 'err');
+        $('pinInput').value = '';
+    }
+}
+$('pinInput') && $('pinInput').addEventListener('keydown', e => { if (e.key === 'Enter') desbloquear(); });
+
+async function togglePin(activo) {
+    if (activo) {
+        const pin = prompt('Crea un PIN de 4 a 6 dígitos:');
+        if (!pin || pin.length < 4 || pin.length > 6 || !/^\d+$/.test(pin)) {
+            $('pinToggle').checked = false;
+            return toast('PIN inválido (4-6 dígitos)', 'err');
+        }
+        const confirmar = prompt('Confirma el PIN:');
+        if (confirmar !== pin) {
+            $('pinToggle').checked = false;
+            return toast('Los PIN no coinciden', 'err');
+        }
+        state.config.pinHash = await sha256(pin);
+        state.config.pinEnabled = true;
+        $('btnCambiarPin').style.display = 'block';
+        toast('PIN activado', 'ok');
+    } else {
+        state.config.pinEnabled = false;
+        state.config.pinHash = null;
+        $('btnCambiarPin').style.display = 'none';
+        toast('PIN desactivado');
+    }
+    guardar();
+}
+
+async function cambiarPin() {
+    const actual = prompt('Ingresa tu PIN actual:');
+    if (!actual) return;
+    const hash = await sha256(actual);
+    if (hash !== state.config.pinHash) return toast('PIN actual incorrecto', 'err');
+    const nuevo = prompt('Nuevo PIN (4-6 dígitos):');
+    if (!nuevo || nuevo.length < 4 || nuevo.length > 6 || !/^\d+$/.test(nuevo)) return toast('PIN inválido', 'err');
+    const conf = prompt('Confirma el nuevo PIN:');
+    if (conf !== nuevo) return toast('No coinciden', 'err');
+    state.config.pinHash = await sha256(nuevo);
+    guardar();
+    toast('PIN actualizado', 'ok');
+}
+
+/* =========================================================
+   TEMA Y PRIVACIDAD
+   ========================================================= */
+function aplicarTema(tema) {
+    if (tema === 'light') document.body.classList.add('light');
+    else document.body.classList.remove('light');
+    state.config.theme = tema;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = tema === 'light' ? '#F1F5F9' : '#1E293B';
+}
+function toggleTema(esClaro) {
+    aplicarTema(esClaro ? 'light' : 'dark');
+    guardar();
+}
+function togglePrivacidad(activo) {
+    const on = typeof activo === 'boolean' ? activo : !state.config.privacy;
+    state.config.privacy = on;
+    document.body.classList.toggle('privacy', on);
+    $('privacyToggle').checked = on;
+    $('privacyBtn').classList.toggle('active', on);
+    guardar();
+}
+
+/* =========================================================
+   TASA BCV
+   ========================================================= */
+const APIS_TASA = [
+    { url: 'https://ve.dolarapi.com/v1/dolares/oficial', pick: d => d.promedio || d.precio },
+    { url: 'https://pydolarve.org/api/v1/dollar?page=bcv', pick: d => d?.price },
+    { url: 'https://rates.dolarvzla.com/bcv', pick: d => (typeof d === 'number' ? d : (d.price || d.rate || d.bcv)) }
+];
+
+async function cargarTasa(forzar = false) {
+    const hoy = hoyISO();
+    // ↻ explícito = el usuario pide volver a la tasa automática
+    if (forzar && state.tasasManuales[hoy]) { delete state.tasasManuales[hoy]; guardar(); }
+    // Si hay tasa manual para hoy, tiene prioridad sobre la API
+    if (state.tasasManuales[hoy] > 0) {
+        state.tasaBCV = state.tasasManuales[hoy];
+        mostrarTasa();
+        return;
+    }
+    $('tasaDisplay').textContent = 'Cargando...';
+    for (const api of APIS_TASA) {
+        try {
+            const ctrl = new AbortController();
+            const t = setTimeout(() => ctrl.abort(), 7000);
+            const res = await fetch(api.url, { signal: ctrl.signal });
+            clearTimeout(t);
+            const data = await res.json();
+            const valor = parseFloat(api.pick(data));
+            if (valor > 0) {
+                // El usuario pudo guardar una tasa manual mientras la API respondía
+                if (state.tasasManuales[hoy] > 0) { mostrarTasa(); return; }
+                state.tasaBCV = valor;
+                guardarTasaEnHistorial(hoy, valor);
+                guardar();
+                mostrarTasa();
+                render();
+                return;
+            }
+        } catch (e) { /* siguiente */ }
+    }
+    if (state.tasaBCV > 0) {
+        mostrarTasa();
+        toast('Sin conexión: usando la última tasa guardada', 'err');
+    } else {
+        $('tasaDisplay').textContent = 'No disponible — usa la tasa manual';
+    }
+}
+
+async function cargarHistorialTasas() {
+    const ultima = localStorage.getItem('lapa_historial_fecha');
+    if (ultima === hoyISO()) return;
+    try {
+        const ctrl = new AbortController();
+        const t = setTimeout(() => ctrl.abort(), 9000);
+        const res = await fetch('https://ve.dolarapi.com/v1/historicos/dolares/oficial', { signal: ctrl.signal });
+        clearTimeout(t);
+        const data = await res.json();
+        if (Array.isArray(data)) {
+            data.forEach(item => {
+                const fecha = normalizarFechaAPI(item.fecha);
+                const valor = parseFloat(item.promedio || item.precio);
+                if (fecha && valor > 0) state.tasasHistorial[fecha] = valor;
+            });
+            guardar();
+            localStorage.setItem('lapa_historial_fecha', hoyISO());
+        }
+    } catch (e) { console.warn('Historial tasas:', e); }
+}
+
+function normalizarFechaAPI(f) {
+    if (!f) return null;
+    const m = String(f).match(/^(\d{4})[-\/](\d{2})[-\/](\d{2})/);       // 2026-10-04 o 2026/10/04
+    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+    const m2 = String(f).match(/^(\d{2})[-\/](\d{2})[-\/](\d{4})/);      // 04-10-2026
+    return m2 ? `${m2[3]}-${m2[2]}-${m2[1]}` : null;
+}
+
+async function obtenerTasaDeAPI(fecha) {
+    // La documentación de DolarAPI pide YYYY/MM/DD; se prueba también con guiones
+    for (const f of [fecha.replace(/-/g, '/'), fecha]) {
+        const v = await consultarTasaFecha(f);
+        if (v) return v;
+    }
+    return null;
+}
+
+async function consultarTasaFecha(fecha) {
+    try {
+        const ctrl = new AbortController();
+        const t = setTimeout(() => ctrl.abort(), 8000);
+        const res = await fetch(`https://ve.dolarapi.com/v1/historicos/dolares/oficial/${fecha}`, { signal: ctrl.signal });
+        clearTimeout(t);
+        if (!res.ok) return null;
+        const data = await res.json();
+        if (Array.isArray(data)) {
+            const item = data[0];
+            return item ? parseFloat(item.promedio || item.precio) : null;
+        }
+        const valor = parseFloat(data.promedio || data.precio);
+        return valor > 0 ? valor : null;
+    } catch (e) {
+        console.warn('Error consultando tasa histórica:', e);
+        return null;
+    }
+}
+
+function mostrarTasa() {
+    const manual = state.tasasManuales[hoyISO()] > 0;
+    $('tasaDisplay').textContent = `Bs. ${state.tasaBCV.toFixed(2)}${manual ? ' (manual)' : ''}`;
+    $('tasaDisplay').classList.toggle('manual', manual);
+}
+
+let tasaManualToken = 0;
+function abrirTasaManual() {
+    $('tasaManualFecha').value = hoyISO();
+    $('tasaManualInput').value = '';
+    $('modalTasa').classList.add('open');
+    actualizarTasaManualFecha();
+}
+
+/* Al cambiar la fecha del modal, carga la tasa de ESA fecha:
+   manual → historial → API (BCV por fecha) → más cercana anterior */
+async function actualizarTasaManualFecha() {
+    const fecha = $('tasaManualFecha').value || hoyISO();
+    const input = $('tasaManualInput');
+    const info = $('tasaManualInfo');
+    const token = ++tasaManualToken;
+
+    const poner = (tasa, texto) => {
+        if (token !== tasaManualToken) return;          // el usuario ya cambió de fecha otra vez
+        input.value = tasa > 0 ? tasa.toFixed(2) : '';
+        info.innerHTML = texto;
+    };
+
+    if (state.tasasManuales[fecha] > 0) {
+        return poner(state.tasasManuales[fecha], `✎ Tasa <b>manual</b> del ${formatearFecha(fecha)}`);
+    }
+    if (state.tasasHistorial[fecha] > 0) {
+        return poner(state.tasasHistorial[fecha], `💱 Tasa BCV del ${formatearFecha(fecha)}`);
+    }
+    if (fecha === hoyISO() && state.tasaBCV > 0) {
+        return poner(state.tasaBCV, `💱 Tasa BCV de hoy`);
+    }
+    if (fecha > hoyISO()) {
+        return poner(0, '⚠️ Fecha futura: el BCV aún no publica tasa. Escríbela manualmente.');
+    }
+
+    info.innerHTML = '🔍 Buscando tasa BCV de esa fecha...';
+    input.value = '';
+    const tasaAPI = await obtenerTasaDeAPI(fecha);
+    if (token !== tasaManualToken) return;
+    if (tasaAPI && tasaAPI > 0) {
+        guardarTasaEnHistorial(fecha, tasaAPI);
+        guardar();
+        return poner(tasaAPI, `💱 Tasa BCV del ${formatearFecha(fecha)} (DolarAPI)`);
+    }
+    const cercana = obtenerTasaInfo(fecha);
+    if (cercana.tasa > 0 && !cercana.exacta && cercana.fechaUsada < fecha) {   // solo una fecha anterior real, nunca la de hoy
+        poner(cercana.tasa, `⚠️ Sin dato para esa fecha. Se sugiere la más cercana (${formatearFecha(cercana.fechaUsada)}). Ajústala si hace falta.`);
+    } else {
+        poner(0, '⚠️ No se encontró tasa para esa fecha. Escríbela manualmente.');
+    }
+}
+function cerrarTasaManual() { $('modalTasa').classList.remove('open'); }
+function guardarTasaManual() {
+    const v = parseNum($('tasaManualInput').value);
+    const fecha = $('tasaManualFecha').value || hoyISO();
+    if (!v || v <= 0) return toast('Tasa inválida', 'err');
+    state.tasasManuales[fecha] = v;          // prioridad sobre la API
+    guardarTasaEnHistorial(fecha, v);
+    if (fecha === hoyISO()) state.tasaBCV = v;
+    guardar();
+    mostrarTasa();
+    render();
+    cerrarTasaManual();
+    if (fecha === hoyISO()) toast('Tasa de hoy actualizada', 'ok');
+    else toast(`Tasa del ${formatearFecha(fecha)} guardada (la de hoy no cambia)`, 'ok');
+}
+
+function guardarTasaEnHistorial(fecha, tasa) {
+    if (!fecha || !tasa || tasa <= 0) return;
+    state.tasasHistorial[fecha] = tasa;
+}
+
+function obtenerTasaInfo(fecha) {
+    if (!fecha) return { tasa: state.tasaBCV || 0, exacta: false, fechaUsada: hoyISO() };
+    if (state.tasasManuales[fecha] > 0) {
+        return { tasa: state.tasasManuales[fecha], exacta: true, fechaUsada: fecha };
+    }
+    if (state.tasasHistorial[fecha]) {
+        return { tasa: state.tasasHistorial[fecha], exacta: true, fechaUsada: fecha };
+    }
+    if (fecha === hoyISO() && state.tasaBCV > 0) {
+        return { tasa: state.tasaBCV, exacta: true, fechaUsada: fecha };
+    }
+    const fechas = Object.keys(state.tasasHistorial).sort();
+    let cercana = null;
+    for (const f of fechas) {
+        if (f <= fecha) cercana = f; else break;
+    }
+    if (cercana) {
+        return { tasa: state.tasasHistorial[cercana], exacta: false, fechaUsada: cercana };
+    }
+    return { tasa: state.tasaBCV || 0, exacta: false, fechaUsada: hoyISO() };
+}
+
+/* Tasa propia del registro (la de su fecha). Nunca la del día actual salvo que no exista otra */
+function tasaDeRegistro(r) {
+    return r.tasaUsada || obtenerTasaFecha(r.fecha) || state.tasaBCV || 1;
+}
+
+function obtenerTasaFecha(fecha) {
+    return obtenerTasaInfo(fecha).tasa;
+}
+
+/* =========================================================
+   TABS
+   ========================================================= */
+function cambiarTab(tab, btn) {
+    state.tab = tab;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    $('sec-' + tab).classList.add('active');
+    cerrarFab();
+    render();
+}
+
+function setFiltro(filtro, btn) {
+    state.filtroGastos = filtro;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    renderGastos();
+}
+
+/* =========================================================
+   FAB Y MODALES
+   ========================================================= */
+function toggleFab() {
+    $('fab').classList.toggle('open');
+    $('fabMenu').classList.toggle('open');
+}
+function cerrarFab() {
+    $('fab').classList.remove('open');
+    $('fabMenu').classList.remove('open');
+}
+
+function abrirModal(tipo) {
+    cerrarFab();
+    state.editandoId = null;
+    state.editandoTipo = null;
+    const formMap = { gasto: 'form-gastos', ingreso: 'form-ingresos', deuda: 'form-deudas', meta: 'form-metas' };
+    const titleMap = { gasto: 'Nuevo gasto', ingreso: 'Nuevo ingreso', deuda: 'Nueva deuda', meta: 'Nueva meta' };
+    Object.values(formMap).forEach(id => $(id).classList.add('hidden'));
+    $(formMap[tipo]).classList.remove('hidden');
+    $('modal-title').textContent = titleMap[tipo];
+    $('modal').classList.add('open');
+
+    if (tipo === 'gasto') {
+        $('gasto-fecha').value = hoyISO();
+        $('gasto-tasa-fecha').value = '';
+        actualizarTasaForm(true);
+        actualizarPreviewGasto();
+    }
+    if (tipo === 'ingreso') {
+        $('ingreso-fecha').value = hoyISO();
+        $('ingreso-tasa').value = '';
+        actualizarTasaIngreso(true);
+    }
+    if (tipo === 'deuda') {
+        $('deuda-fecha').value = hoyISO();
+        previewDeuda();
+    }
+}
+
+function abrirModalEdit(tipo, id) {
+    cerrarFab();
+    const formMap = { gasto: 'form-gastos', ingreso: 'form-ingresos', deuda: 'form-deudas', meta: 'form-metas' };
+    Object.values(formMap).forEach(fid => $(fid).classList.add('hidden'));
+    $(formMap[tipo]).classList.remove('hidden');
+    $('modal-title').textContent = 'Editar ' + (tipo === 'gasto' ? 'gasto' : tipo === 'ingreso' ? 'ingreso' : tipo === 'deuda' ? 'deuda' : 'meta');
+    state.editandoId = id;
+    state.editandoTipo = tipo;
+    $('modal').classList.add('open');
+
+    if (tipo === 'gasto') {
+        const g = state.gastos.find(x => x.id === id);
+        if (!g) return;
+        $('gasto-nombre').value = g.nombre;
+        $('gasto-monto').value = g.montoOriginal;
+        $('gasto-moneda').value = g.monedaOriginal;
+        $('gasto-fecha').value = g.fecha;
+        $('gasto-tasa-fecha').value = g.tasaUsada || '';
+        $('gasto-notas').value = g.notas || '';
+        $('gasto-igtf').checked = !!g.igtf;
+        state.categoriaSeleccionada = g.categoria;
+        document.querySelectorAll('.categoria-item').forEach(el => {
+            el.classList.toggle('selected', el.dataset.cat === g.categoria);
+        });
+        actualizarTasaForm(false);
+        actualizarPreviewGasto();
+    }
+    if (tipo === 'ingreso') {
+        const i = state.ingresos.find(x => x.id === id);
+        if (!i) return;
+        $('ingreso-nombre').value = i.nombre;
+        $('ingreso-monto').value = i.montoOriginal;
+        $('ingreso-moneda').value = i.monedaOriginal;
+        $('ingreso-fecha').value = i.fecha;
+        $('ingreso-fuente').value = i.fuente;
+        $('ingreso-tasa').value = i.tasaUsada || '';
+        $('ingreso-notas').value = i.notas || '';
+        actualizarTasaIngreso(false);
+    }
+    if (tipo === 'deuda') {
+        const d = state.deudas.find(x => x.id === id);
+        if (!d) return;
+        $('deuda-nombre').value = d.nombre;
+        $('deuda-total').value = d.montoTotal;
+        $('deuda-interes').value = d.interes || '';
+        $('deuda-ncuotas').value = d.pagos.length;
+        $('deuda-frecuencia').value = d.frecuencia;
+        $('deuda-fecha').value = d.pagos[0]?.fecha || hoyISO();
+        $('deuda-notas').value = d.notas || '';
+        previewDeuda();
+    }
+    if (tipo === 'meta') {
+        const m = state.metas.find(x => x.id === id);
+        if (!m) return;
+        $('meta-nombre').value = m.nombre;
+        $('meta-objetivo').value = m.montoObjetivo;
+        $('meta-actual').value = m.montoActual || 0;
+        $('meta-fecha').value = m.fechaLimite || '';
+    }
+}
+
+function cerrarModal() {
+    $('modal').classList.remove('open');
+    state.editandoId = null;
+    state.editandoTipo = null;
+    ['gasto-nombre','gasto-monto','gasto-notas','gasto-tasa-fecha',
+     'ingreso-nombre','ingreso-monto','ingreso-notas','ingreso-tasa',
+     'deuda-nombre','deuda-total','deuda-interes','deuda-ncuotas','deuda-notas',
+     'meta-nombre','meta-objetivo','meta-actual','meta-fecha'].forEach(id => {
+        if ($(id)) $(id).value = '';
+    });
+    $('gasto-igtf').checked = false;
+    state.categoriaSeleccionada = 'comida';
+    document.querySelectorAll('.categoria-item').forEach(el => {
+        el.classList.toggle('selected', el.dataset.cat === 'comida');
+    });
+    $('previewGasto').innerHTML = '';
+    $('previewDeuda').innerHTML = '';
+    $('tasaFechaInfo').innerHTML = '';
+    $('tasaIngresoInfo').innerHTML = '';
+}
+
+function construirCategorias() {
+    const grid = $('categoriasGrid');
+    const cats = getCategorias();
+    grid.innerHTML = Object.entries(cats).map(([key, c]) => `
+        <div class="categoria-item ${key === 'comida' ? 'selected' : ''}" data-cat="${key}" onclick="selectCategoria('${key}', this)">
+            <span class="categoria-icon">${c.icon}</span>${esc(c.label)}
+        </div>
+    `).join('');
+}
+
+function selectCategoria(cat, el) {
+    state.categoriaSeleccionada = cat;
+    document.querySelectorAll('.categoria-item').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+}
+
+/* =========================================================
+   TASA DEL FORMULARIO
+   ========================================================= */
+async function actualizarTasaForm(force = false) {
+    const fecha = $('gasto-fecha').value || hoyISO();
+    const infoBox = $('tasaFechaInfo');
+    const input = $('gasto-tasa-fecha');
+
+    let info = obtenerTasaInfo(fecha);
+
+    if (!info.exacta) {
+        infoBox.innerHTML = '🔍 Buscando tasa en DolarAPI...';
+        const tasaAPI = await obtenerTasaDeAPI(fecha);
+        if (tasaAPI && tasaAPI > 0) {
+            guardarTasaEnHistorial(fecha, tasaAPI);
+            guardar();
+            info = { tasa: tasaAPI, exacta: true, fechaUsada: fecha };
+        }
+    }
+
+    const tasa = info.tasa;
+    if (tasa > 0) {
+        if (info.exacta) {
+            infoBox.innerHTML = `💱 Tasa del <b>${formatearFecha(fecha)}</b>: Bs. <b>${tasa.toFixed(2)}</b>`;
+        } else {
+            infoBox.innerHTML = `💱 Tasa más cercana al <b>${formatearFecha(fecha)}</b> (del ${formatearFecha(info.fechaUsada)}): Bs. <b>${tasa.toFixed(2)}</b>`;
+        }
+    } else {
+        infoBox.innerHTML = '⚠️ No se encontró tasa para esa fecha. Escríbela manualmente.';
+    }
+
+    if (force) {
+        input.value = tasa > 0 ? tasa.toFixed(2) : (state.tasaBCV > 0 ? state.tasaBCV.toFixed(2) : '');
+    } else if (!input.value && tasa > 0) {
+        input.value = tasa.toFixed(2);
+    }
+
+    actualizarPreviewGasto();
+}
+
+async function actualizarTasaIngreso(force = false) {
+    const fecha = $('ingreso-fecha').value || hoyISO();
+    const infoBox = $('tasaIngresoInfo');
+    const input = $('ingreso-tasa');
+
+    let info = obtenerTasaInfo(fecha);
+
+    if (!info.exacta) {
+        infoBox.innerHTML = '🔍 Buscando tasa en DolarAPI...';
+        const tasaAPI = await obtenerTasaDeAPI(fecha);
+        if (tasaAPI && tasaAPI > 0) {
+            guardarTasaEnHistorial(fecha, tasaAPI);
+            guardar();
+            info = { tasa: tasaAPI, exacta: true, fechaUsada: fecha };
+        }
+    }
+
+    const tasa = info.tasa;
+    if (tasa > 0) {
+        if (info.exacta) {
+            infoBox.innerHTML = `💱 Tasa del <b>${formatearFecha(fecha)}</b>: Bs. <b>${tasa.toFixed(2)}</b>`;
+        } else {
+            infoBox.innerHTML = `💱 Tasa más cercana al <b>${formatearFecha(fecha)}</b> (del ${formatearFecha(info.fechaUsada)}): Bs. <b>${tasa.toFixed(2)}</b>`;
+        }
+    } else {
+        infoBox.innerHTML = '⚠️ No se encontró tasa para esa fecha. Escríbela manualmente.';
+    }
+
+    if (force) {
+        input.value = tasa > 0 ? tasa.toFixed(2) : (state.tasaBCV > 0 ? state.tasaBCV.toFixed(2) : '');
+    } else if (!input.value && tasa > 0) {
+        input.value = tasa.toFixed(2);
+    }
+}
+
+function actualizarPreviewGasto() {
+    const monto = parseFloat($('gasto-monto').value) || 0;
+    const moneda = $('gasto-moneda').value;
+    const tasa = parseNum($('gasto-tasa-fecha').value) || obtenerTasaFecha($('gasto-fecha').value);
+    const igtf = $('gasto-igtf').checked;
+    const prev = $('previewGasto');
+
+    if (monto <= 0 || !tasa) { prev.innerHTML = ''; return; }
+
+    let montoFinal = monto;
+    let textoIGTF = '';
+    if (igtf) {
+        montoFinal = monto * 1.03;
+        textoIGTF = ` (incluye IGTF 3%: ${moneda === 'USD' ? '$' : 'Bs.'}${(monto * 0.03).toFixed(2)})`;
+    }
+
+    if (moneda === 'USD') {
+        const bs = montoFinal * tasa;
+        prev.innerHTML = `💵 Total: <b>$${montoFinal.toFixed(2)}</b>${textoIGTF}<br>🇻🇪 Equivalente: <b>Bs. ${bs.toFixed(2)}</b> a tasa ${tasa.toFixed(2)}`;
+    } else {
+        const usd = montoFinal / tasa;
+        prev.innerHTML = `🇻🇪 Total: <b>Bs. ${montoFinal.toFixed(2)}</b>${textoIGTF}<br>💵 Equivalente: <b>$${usd.toFixed(2)}</b> a tasa ${tasa.toFixed(2)}`;
+    }
+}
+
+/* =========================================================
+   GUARDAR GASTO / INGRESO
+   ========================================================= */
+function guardarGasto() {
+    const nombre = $('gasto-nombre').value.trim() || getCategorias()[state.categoriaSeleccionada].label;
+    const monto = parseFloat($('gasto-monto').value);
+    const moneda = $('gasto-moneda').value;
+    const fecha = $('gasto-fecha').value || hoyISO();
+    const igtf = $('gasto-igtf').checked;
+    const notas = $('gasto-notas').value.trim();
+
+    if (!monto || monto <= 0) return toast('Ingresa un monto válido', 'err');
+
+    let tasaUsada = parseNum($('gasto-tasa-fecha').value) || obtenerTasaFecha(fecha);
+    if (moneda === 'BS' && (!tasaUsada || tasaUsada <= 0)) {
+        return toast('Falta la tasa BCV para esa fecha', 'err');
+    }
+
+    const montoFinal = igtf ? monto * 1.03 : monto;
+    if (tasaUsada > 0) guardarTasaEnHistorial(fecha, tasaUsada);
+
+    const montoUSD = moneda === 'BS' ? montoFinal / tasaUsada : montoFinal;
+
+    if (state.editandoId) {
+        const g = state.gastos.find(x => x.id === state.editandoId);
+        if (g) {
+            Object.assign(g, { nombre, monto: montoUSD, monedaOriginal: moneda, montoOriginal: monto,
+                categoria: state.categoriaSeleccionada, fecha, tasaUsada: tasaUsada || null, igtf, notas });
+        }
+        toast('Gasto actualizado', 'ok');
+    } else {
+        state.gastos.unshift({
+            id: Date.now(), nombre, monto: montoUSD, monedaOriginal: moneda, montoOriginal: monto,
+            categoria: state.categoriaSeleccionada, fecha, tasaUsada: tasaUsada || null, igtf, notas, creado: Date.now()
+        });
+        toast('Gasto guardado', 'ok');
+    }
+
+    guardar();
+    cerrarModal();
+    render();
+}
+
+function guardarComoPlantilla() {
+    const nombre = $('gasto-nombre').value.trim();
+    const monto = parseFloat($('gasto-monto').value);
+    const moneda = $('gasto-moneda').value;
+    const notas = $('gasto-notas').value.trim();
+
+    if (!nombre || !monto) return toast('Llena nombre y monto primero', 'err');
+
+    state.plantillas.push({ id: Date.now(), nombre, monto, moneda, categoria: state.categoriaSeleccionada, notas });
+    guardar();
+    toast('Plantilla guardada', 'ok');
+}
+
+function guardarIngreso() {
+    const nombre = $('ingreso-nombre').value.trim() || FUENTES_INGRESO[$('ingreso-fuente').value].label;
+    const monto = parseFloat($('ingreso-monto').value);
+    const moneda = $('ingreso-moneda').value;
+    const fecha = $('ingreso-fecha').value || hoyISO();
+    const fuente = $('ingreso-fuente').value;
+    const notas = $('ingreso-notas').value.trim();
+
+    if (!monto || monto <= 0) return toast('Ingresa un monto válido', 'err');
+
+    let tasaUsada = parseNum($('ingreso-tasa').value) || obtenerTasaFecha(fecha);
+    if (moneda === 'BS' && (!tasaUsada || tasaUsada <= 0)) {
+        return toast('Falta la tasa BCV para esa fecha', 'err');
+    }
+
+    if (tasaUsada > 0) guardarTasaEnHistorial(fecha, tasaUsada);
+    const montoUSD = moneda === 'BS' ? monto / tasaUsada : monto;
+
+    if (state.editandoId) {
+        const i = state.ingresos.find(x => x.id === state.editandoId);
+        if (i) {
+            Object.assign(i, { nombre, monto: montoUSD, monedaOriginal: moneda, montoOriginal: monto, fecha, tasaUsada, fuente, notas });
+        }
+        toast('Ingreso actualizado', 'ok');
+    } else {
+        state.ingresos.unshift({
+            id: Date.now(), nombre, monto: montoUSD, monedaOriginal: moneda, montoOriginal: monto,
+            fecha, tasaUsada: tasaUsada || null, fuente, notas, creado: Date.now()
+        });
+        toast('Ingreso guardado', 'ok');
+    }
+
+    guardar();
+    cerrarModal();
+    render();
+}
+
+/* =========================================================
+   DEUDAS
+   ========================================================= */
+function previewDeuda() {
+    const total = parseFloat($('deuda-total').value);
+    const interes = parseFloat($('deuda-interes').value) || 0;
+    const n = parseInt($('deuda-ncuotas').value);
+    const el = $('previewDeuda');
+    if (total > 0 && n > 0) {
+        const totalConInteres = total * (1 + interes / 100);
+        const cuota = totalConInteres / n;
+        const f0 = $('deuda-fecha').value || hoyISO();
+        const fFin = calcularFechaCuota(f0, n - 1, $('deuda-frecuencia').value);
+        let texto = `Cada cuota: <b>$${cuota.toFixed(2)}</b>`;
+        if (interes > 0) texto += ` (total con interés: $${totalConInteres.toFixed(2)})`;
+        texto += `<br>Último pago aprox: <b>${formatearFecha(fFin)}</b>`;
+        el.innerHTML = texto;
+    } else {
+        el.innerHTML = '';
+    }
+}
+
+function calcularFechaCuota(fechaBase, indice, frecuencia) {
+    if (frecuencia === 'semanal') return sumarDias(fechaBase, 7 * indice);
+    if (frecuencia === 'quincenal') return sumarDias(fechaBase, 14 * indice);
+    return sumarMeses(fechaBase, indice);
+}
+
+function guardarDeuda() {
+    const nombre = $('deuda-nombre').value.trim() || 'Deuda';
+    const total = parseFloat($('deuda-total').value);
+    const interes = parseFloat($('deuda-interes').value) || 0;
+    const n = parseInt($('deuda-ncuotas').value);
+    const frecuencia = $('deuda-frecuencia').value;
+    const f0 = $('deuda-fecha').value || hoyISO();
+    const notas = $('deuda-notas').value.trim();
+
+    if (!total || total <= 0) return toast('Ingresa el monto total', 'err');
+    if (!n || n < 1 || n > 60) return toast('N° de cuotas entre 1 y 60', 'err');
+
+    const totalConInteres = total * (1 + interes / 100);
+    const montoCuota = +(totalConInteres / n).toFixed(2);
+
+    if (state.editandoId) {
+        const d = state.deudas.find(x => x.id === state.editandoId);
+        if (!d) return;
+        const pagosHechos = d.pagos.filter(p => p.pagado);
+        d.nombre = nombre;
+        d.montoTotal = total;
+        d.interes = interes;
+        d.frecuencia = frecuencia;
+        d.notas = notas;
+        const nuevosPagos = [];
+        for (let i = 0; i < n; i++) {
+            if (i < pagosHechos.length) {
+                nuevosPagos.push(pagosHechos[i]);
+            } else {
+                nuevosPagos.push({
+                    n: i + 1, fecha: calcularFechaCuota(f0, i, frecuencia),
+                    monto: montoCuota, pagado: false, fechaPago: null, gastoId: null
+                });
+            }
+        }
+        d.pagos = nuevosPagos;
+        toast('Deuda actualizada', 'ok');
+    } else {
+        const pagos = [];
+        for (let i = 0; i < n; i++) {
+            pagos.push({
+                n: i + 1, fecha: calcularFechaCuota(f0, i, frecuencia),
+                monto: montoCuota, pagado: false, fechaPago: null, gastoId: null
+            });
+        }
+        state.deudas.unshift({
+            id: Date.now(), nombre, montoTotal: total, interes, frecuencia, notas, pagos, creado: Date.now()
+        });
+        toast('Deuda registrada', 'ok');
+    }
+
+    guardar();
+    cerrarModal();
+    render();
+    revisarNotificaciones();
+}
+
+function togglePago(deudaId, nPago) {
+    const d = state.deudas.find(x => x.id === deudaId);
+    if (!d) return;
+    const p = d.pagos.find(x => x.n === nPago);
+    if (!p) return;
+
+    if (p.pagado) {
+        if (p.gastoId) {
+            state.gastos = state.gastos.filter(g => g.id !== p.gastoId);
+            p.gastoId = null;
+        }
+        p.pagado = false;
+        p.fechaPago = null;
+        toast('Pago marcado como pendiente');
+    } else {
+        p.pagado = true;
+        p.fechaPago = hoyISO();
+        const gid = Date.now() + Math.random();
+        state.gastos.unshift({
+            id: gid, nombre: `${d.nombre} · Cuota ${p.n}`, monto: p.monto,
+            monedaOriginal: 'USD', montoOriginal: p.monto, categoria: 'deudas',
+            fecha: hoyISO(), tasaUsada: state.tasaBCV || null,
+            notas: `Pago automático de deuda`, creado: Date.now()
+        });
+        p.gastoId = gid;
+        toast(`Pago registrado · $${p.monto.toFixed(2)}`, 'ok');
+    }
+
+    delete notifRegistro[`${deudaId}_${nPago}`];
+    guardarNotifReg();
+    guardar();
+    render();
+}
+
+function abrirPagoParcial(deudaId, nPago) {
+    const d = state.deudas.find(x => x.id === deudaId);
+    if (!d) return;
+    const p = d.pagos.find(x => x.n === nPago);
+    if (!p) return;
+    state.pagoParcialContext = { deudaId, nPago };
+    $('abonoMonto').value = '';
+    $('abonoInfo').innerHTML = `Cuota ${p.n} de <b>$${p.monto.toFixed(2)}</b>. Si abonas menos, quedará un saldo pendiente.`;
+    $('modalPagoParcial').classList.add('open');
+}
+function cerrarPagoParcial() {
+    $('modalPagoParcial').classList.remove('open');
+    state.pagoParcialContext = null;
+}
+function confirmarAbono() {
+    const ctx = state.pagoParcialContext;
+    if (!ctx) return;
+    const monto = parseFloat($('abonoMonto').value);
+    if (!monto || monto <= 0) return toast('Monto inválido', 'err');
+
+    const d = state.deudas.find(x => x.id === ctx.deudaId);
+    if (!d) return;
+    const p = d.pagos.find(x => x.n === ctx.nPago);
+    if (!p) return;
+
+    p.abonos = p.abonos || [];
+    p.abonos.push({ monto, fecha: hoyISO() });
+    const totalAbonado = p.abonos.reduce((s, a) => s + a.monto, 0);
+
+    const gid = Date.now() + Math.random();
+    state.gastos.unshift({
+        id: gid, nombre: `${d.nombre} · Abono cuota ${p.n}`, monto: monto,
+        monedaOriginal: 'USD', montoOriginal: monto, categoria: 'deudas',
+        fecha: hoyISO(), tasaUsada: state.tasaBCV || null,
+        notas: `Abono parcial. Total abonado: $${totalAbonado.toFixed(2)} / $${p.monto.toFixed(2)}`,
+        creado: Date.now()
+    });
+
+    if (totalAbonado >= p.monto - 0.01) {
+        p.pagado = true;
+        p.fechaPago = hoyISO();
+        p.gastoId = gid;
+        toast('Cuota completada', 'ok');
+    } else {
+        toast(`Abono registrado. Pendiente: $${(p.monto - totalAbonado).toFixed(2)}`, 'ok');
+    }
+
+    guardar();
+    cerrarPagoParcial();
+    render();
+}
+
+function eliminarDeuda(id) {
+    const d = state.deudas.find(x => x.id === id);
+    if (!d) return;
+    const pagados = d.pagos.filter(p => p.pagado).length;
+    const msg = pagados > 0
+        ? `Esta deuda tiene ${pagados} pago(s). Se moverá a la papelera junto con sus gastos asociados.`
+        : '¿Enviar esta deuda a la papelera?';
+    if (!confirm(msg)) return;
+
+    state.papelera.unshift({ tipo: 'deuda', item: d, borradoEn: Date.now() });
+    d.pagos.forEach(p => {
+        if (p.gastoId) state.gastos = state.gastos.filter(g => g.id !== p.gastoId);
+    });
+    state.deudas = state.deudas.filter(x => x.id !== id);
+    guardar();
+    render();
+    toast('Deuda movida a papelera');
+}
+
+function toggleDetalleDeuda(id) {
+    if (state.deudasAbiertas.has(id)) state.deudasAbiertas.delete(id);
+    else state.deudasAbiertas.add(id);
+    renderDeudas();
+}
+
+function cambiarEstrategia(v) {
+    state.config.estrategia = v;
+    guardar();
+    renderDeudas();
+}
+
+function sugerirOrdenDeudas() {
+    const pendientes = state.deudas.filter(d => d.pagos.some(p => !p.pagado));
+    if (state.config.estrategia === 'bola') {
+        return [...pendientes].sort((a, b) => saldoPendiente(a) - saldoPendiente(b));
+    }
+    if (state.config.estrategia === 'avalancha') {
+        return [...pendientes].sort((a, b) => (b.interes || 0) - (a.interes || 0));
+    }
+    return pendientes;
+}
+
+function saldoPendiente(d) {
+    return d.pagos.filter(p => !p.pagado).reduce((s, p) => s + p.monto - (p.abonos ? p.abonos.reduce((x, a) => x + a.monto, 0) : 0), 0);
+}
+
+/* =========================================================
+   METAS
+   ========================================================= */
+function guardarMeta() {
+    const nombre = $('meta-nombre').value.trim() || 'Meta';
+    const objetivo = parseFloat($('meta-objetivo').value);
+    const actual = parseFloat($('meta-actual').value) || 0;
+    const fechaLimite = $('meta-fecha').value || null;
+
+    if (!objetivo || objetivo <= 0) return toast('Ingresa un objetivo válido', 'err');
+
+    if (state.editandoId) {
+        const m = state.metas.find(x => x.id === state.editandoId);
+        if (m) Object.assign(m, { nombre, montoObjetivo: objetivo, montoActual: actual, fechaLimite });
+        toast('Meta actualizada', 'ok');
+    } else {
+        state.metas.push({
+            id: Date.now(), nombre, montoObjetivo: objetivo, montoActual: actual, fechaLimite, creado: Date.now()
+        });
+        toast('Meta creada', 'ok');
+    }
+    guardar();
+    cerrarModal();
+    render();
+}
+
+function abonarMeta(id) {
+    const m = state.metas.find(x => x.id === id);
+    if (!m) return;
+    const monto = parseFloat(prompt(`Abonar a "${m.nombre}". Saldo actual: $${m.montoActual.toFixed(2)} / $${m.montoObjetivo.toFixed(2)}`));
+    if (!monto || monto <= 0) return;
+    m.montoActual = Math.min(m.montoObjetivo, m.montoActual + monto);
+    guardar();
+    render();
+    toast(m.montoActual >= m.montoObjetivo ? '¡Meta completada! 🎉' : 'Abono registrado', 'ok');
+}
+
+function eliminarMeta(id) {
+    if (!confirm('¿Eliminar esta meta?')) return;
+    state.metas = state.metas.filter(m => m.id !== id);
+    guardar();
+    render();
+}
+
+/* =========================================================
+   ELIMINAR / PAPELERA
+   ========================================================= */
+function eliminarGasto(id) {
+    if (!confirm('¿Enviar este gasto a la papelera?')) return;
+    const g = state.gastos.find(x => x.id === id);
+    if (g) state.papelera.unshift({ tipo: 'gasto', item: g, borradoEn: Date.now() });
+    state.gastos = state.gastos.filter(x => x.id !== id);
+    state.deudas.forEach(d => d.pagos.forEach(p => {
+        if (p.gastoId === id) { p.gastoId = null; p.pagado = false; p.fechaPago = null; }
+    }));
+    guardar();
+    render();
+    toast('Gasto movido a papelera');
+}
+
+function eliminarIngreso(id) {
+    if (!confirm('¿Enviar este ingreso a la papelera?')) return;
+    const i = state.ingresos.find(x => x.id === id);
+    if (i) state.papelera.unshift({ tipo: 'ingreso', item: i, borradoEn: Date.now() });
+    state.ingresos = state.ingresos.filter(x => x.id !== id);
+    guardar();
+    render();
+    toast('Ingreso movido a papelera');
+}
+
+function restaurarDePapelera(idx) {
+    const item = state.papelera[idx];
+    if (!item) return;
+    if (item.tipo === 'gasto') state.gastos.unshift(item.item);
+    if (item.tipo === 'ingreso') state.ingresos.unshift(item.item);
+    if (item.tipo === 'deuda') state.deudas.unshift(item.item);
+    state.papelera.splice(idx, 1);
+    guardar();
+    render();
+    renderPapelera();
+    toast('Restaurado', 'ok');
+}
+
+function borrarDePapelera(idx) {
+    if (!confirm('¿Borrar definitivamente?')) return;
+    state.papelera.splice(idx, 1);
+    guardar();
+    renderPapelera();
+}
+
+function vaciarPapelera() {
+    if (!state.papelera.length) return;
+    if (!confirm('¿Vaciar la papelera? No se puede deshacer.')) return;
+    state.papelera = [];
+    guardar();
+    renderPapelera();
+    toast('Papelera vaciada');
+}
+
+/* =========================================================
+   PRÓXIMOS PAGOS Y NOTIFICACIONES
+   ========================================================= */
+function proximosPagos() {
+    const lista = [];
+    state.deudas.forEach(d => {
+        const p = d.pagos.find(x => !x.pagado);
+        if (!p) return;
+        lista.push({ deuda: d, pago: p, dias: diasHasta(p.fecha) });
+    });
+    return lista.sort((a, b) => a.dias - b.dias);
+}
+
+function renderAlertas() {
+    const cont = $('alertas');
+    const pend = proximosPagos().filter(x => x.dias <= state.config.diasAviso);
+    if (!pend.length) { cont.innerHTML = ''; return; }
+
+    cont.innerHTML = pend.map(x => {
+        const d = x.dias;
+        let txt, cls;
+        if (d < 0) { txt = `Vencido hace ${Math.abs(d)} día${Math.abs(d) === 1 ? '' : 's'}`; cls = 'vencido'; }
+        else if (d === 0) { txt = '¡Vence HOY!'; cls = 'vencido'; }
+        else { txt = `Vence en ${d} día${d === 1 ? '' : 's'}`; cls = ''; }
+
+        return `<div class="alerta ${cls}">
+            <span class="alerta-icon">${cls === 'vencido' ? '⚠️' : '🔔'}</span>
+            <div class="alerta-body">
+                <div class="alerta-title">${esc(x.deuda.nombre)} · Cuota ${x.pago.n}</div>
+                <div class="alerta-sub">${txt} · $${x.pago.monto.toFixed(2)} · ${formatearFecha(x.pago.fecha)}</div>
+                <div class="alerta-actions">
+                    <button class="pri" onclick="togglePago(${x.deuda.id}, ${x.pago.n})">✓ Pagar</button>
+                    <button onclick="posponerAviso(${x.deuda.id}, ${x.pago.n})">Posponer</button>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function posponerAviso(deudaId, nPago) {
+    notifRegistro[`${deudaId}_${nPago}`] = hoyISO();
+    guardarNotifReg();
+    renderAlertas();
+    toast('Aviso pospuesto por hoy');
+}
+
+function actualizarEstadoNotif() {
+    if (esNativa()) {
+        permisoNotifNativo(false).then(r => {
+            if ($('notifDesc')) $('notifDesc').textContent = r === 'granted' ? '🔔 Notificaciones activadas' : (r === 'denied' ? '🔕 Bloqueadas en Ajustes de Android' : 'Avisos de pagos próximos');
+            if ($('notifBtn')) $('notifBtn').textContent = r === 'granted' ? '✓ Activas' : (r === 'denied' ? 'Bloqueadas' : 'Activar');
+        });
+        return;
+    }
+    const btn = $('notifBtn');
+    const desc = $('notifDesc');
+    if (!('Notification' in window)) {
+        if (desc) desc.textContent = '⚠️ Tu navegador no soporta notificaciones';
+        if (btn) { btn.textContent = 'N/A'; btn.disabled = true; }
+        return;
+    }
+    if (Notification.permission === 'granted') {
+        if (desc) desc.textContent = '🔔 Notificaciones activadas';
+        if (btn) { btn.textContent = '✓ Activas'; btn.classList.remove('primary'); }
+    } else if (Notification.permission === 'denied') {
+        if (desc) desc.textContent = '🔕 Bloqueadas en el navegador';
+        if (btn) btn.textContent = 'Bloqueadas';
+    } else {
+        if (desc) desc.textContent = 'Avisos de pagos próximos';
+        if (btn) btn.textContent = 'Activar';
+    }
+}
+
+async function activarNotificaciones() {
+    if (esNativa()) {
+        const r = await permisoNotifNativo(true);
+        actualizarEstadoNotif();
+        if (r === 'granted') { toast('Notificaciones activadas', 'ok'); programarNotifNativas(); }
+        else toast('Permiso no concedido', 'err');
+        return;
+    }
+    if (!('Notification' in window)) return toast('Tu navegador no soporta notificaciones', 'err');
+    try {
+        const perm = await Notification.requestPermission();
+        actualizarEstadoNotif();
+        if (perm === 'granted') {
+            toast('Notificaciones activadas', 'ok');
+            revisarNotificaciones(true);
+        } else {
+            toast('Permiso no concedido', 'err');
+        }
+    } catch (e) { toast('No se pudo activar', 'err'); }
+}
+
+function probarNotificacion() {
+    if (esNativa()) {
+        plug('LocalNotifications').schedule({ notifications: [{ id: 1, smallIcon: 'ic_stat_lapa', title: 'Lapa App', body: 'Así se verán tus recordatorios de pago 🔔', schedule: { at: new Date(Date.now() + 1500) } }] })
+            .then(() => toast('Notificación enviada', 'ok')).catch(() => toast('Activa las notificaciones primero', 'err'));
+        return;
+    }
+    if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification('Lapa App', { body: 'Así se verán tus recordatorios de pago 🔔' });
+        toast('Notificación enviada', 'ok');
+    } else {
+        toast('Activa las notificaciones primero', 'err');
+    }
+}
+
+function enviarNotificacion(titulo, cuerpo) {
+    if (esNativa()) return false;   // en Android las programa el sistema (programarNotifNativas)
+    try {
+        if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification(titulo, { body: cuerpo, tag: 'lapa-pago' });
+            return true;
+        }
+    } catch (e) { /* nada */ }
+    return false;
+}
+
+function revisarNotificaciones(forzar = false) {
+    const pendientes = proximosPagos().filter(x => x.dias <= state.config.diasAviso);
+    const hoy = hoyISO();
+
+    pendientes.forEach(x => {
+        const key = `${x.deuda.id}_${x.pago.n}`;
+        if (!forzar && notifRegistro[key] === hoy) return;
+        const d = x.dias;
+        let cuando;
+        if (d < 0) cuando = `venció hace ${Math.abs(d)} día(s)`;
+        else if (d === 0) cuando = 'vence HOY';
+        else cuando = `vence en ${d} día(s)`;
+        enviarNotificacion('⏰ Pago próximo', `${x.deuda.nombre} · Cuota ${x.pago.n} de $${x.pago.monto.toFixed(2)} ${cuando}`);
+        notifRegistro[key] = hoy;
+    });
+    guardarNotifReg();
+}
+
+function cambiarDiasAviso(v) {
+    state.config.diasAviso = parseInt(v);
+    guardar();
+    render();
+    revisarNotificaciones();
+}
+
+/* =========================================================
+   RENDER PRINCIPAL
+   ========================================================= */
+function render() {
+    renderAlertas();
+    renderResumenHoy();
+    if (state.tab === 'gastos') renderGastos();
+    if (state.tab === 'deudas') renderDeudas();
+    if (state.tab === 'ingresos') renderIngresos();
+    if (state.tab === 'resumen') renderResumen();
+    if ($('modalConfig').classList.contains('open')) renderPapelera();
+}
+
+/* Saldo arrastrado: todo lo que entró menos lo que salió ANTES de esa fecha (YYYY-MM-DD) */
+function saldoAntesDe(fechaISO) {
+    const i = state.ingresos.filter(x => x.fecha < fechaISO).reduce((s, x) => s + x.monto, 0);
+    const g = state.gastos.filter(x => x.fecha < fechaISO).reduce((s, x) => s + x.monto, 0);
+    return (state.config.saldoInicial || 0) + i - g;
+}
+function fmtUSD(n, signo = false) {
+    const v = Math.abs(n).toFixed(2);
+    return (n < 0 ? '-' : (signo ? '+' : '')) + '$' + v;
+}
+
+function fmtBs(n) { return (n < 0 ? '-' : '') + 'Bs. ' + Math.abs(n).toFixed(2); }
+
+function renderResumenHoy() {
+    const hoy = hoyISO();
+    const g = state.gastos.filter(x => x.fecha === hoy).reduce((s, x) => s + x.monto, 0);
+    const i = state.ingresos.filter(x => x.fecha === hoy).reduce((s, x) => s + x.monto, 0);
+    const bal = saldoAntesDe(sumarDias(hoy, 1));   // disponible acumulado hasta hoy
+
+    $('resumenGastosUSD').textContent = `$${g.toFixed(2)}`;
+    $('resumenIngresosUSD').textContent = `$${i.toFixed(2)}`;
+    $('resumenBalanceUSD').textContent = fmtUSD(bal);
+    $('resumenBalanceBs').textContent = state.tasaBCV > 0 ? fmtBs(bal * state.tasaBCV) : '';
+    $('resumenBalanceUSD').classList.toggle('neg', bal < 0);
+    $('resumenBalanceUSD').classList.toggle('bs', bal >= 0);
+}
+
+function filtrarGastos() {
+    const hoy = new Date(); hoy.setHours(0,0,0,0);
+    const filtro = state.filtroGastos;
+    const busqueda = ($('buscarGastos').value || '').toLowerCase().trim();
+
+    return state.gastos.filter(g => {
+        if (busqueda) {
+            const match = (g.nombre || '').toLowerCase().includes(busqueda)
+                || (g.notas || '').toLowerCase().includes(busqueda)
+                || (getCategorias()[g.categoria]?.label || '').toLowerCase().includes(busqueda);
+            if (!match) return false;
+        }
+        if (filtro === 'todo') return true;
+        if (filtro === 'hoy') return g.fecha === hoyISO();
+        const f = new Date(g.fecha + 'T00:00:00');
+        if (filtro === 'semana') {
+            const diff = (hoy - f) / 86400000;
+            return diff >= 0 && diff < 7;
+        }
+        if (filtro === 'mes') return f.getMonth() === hoy.getMonth() && f.getFullYear() === hoy.getFullYear();
+        return true;
+    }).sort((a, b) => b.fecha.localeCompare(a.fecha) || (b.creado || b.id) - (a.creado || a.id));
+}
+
+function renderGastos() {
+    const cont = $('lista-gastos');
+    const lista = filtrarGastos();
+    const total = lista.reduce((s, g) => s + g.monto, 0);
+    const totalBs = lista.reduce((s, g) => s + g.monto * tasaDeRegistro(g), 0);
+    const cats = getCategorias();
+
+    $('totalGastos').innerHTML = lista.length
+        ? `<span>${lista.length} movimiento${lista.length === 1 ? '' : 's'}</span> · Total: <b>$${total.toFixed(2)}</b> · Bs. ${totalBs.toFixed(2)}`
+        : '';
+
+    if (!lista.length) {
+        cont.innerHTML = `<div class="empty-state"><div class="icon"><span class="lapa-img" style="display:inline-block;width:76px;height:76px"></span></div><p>No hay gastos en este período</p><p style="font-size:12px; margin-top:8px;">Toca el botón + para agregar uno</p></div>`;
+        return;
+    }
+
+    const grupos = {};
+    lista.forEach(g => { (grupos[g.fecha] = grupos[g.fecha] || []).push(g); });
+
+    cont.innerHTML = Object.keys(grupos).sort((a,b) => b.localeCompare(a)).map(fecha => {
+        const items = grupos[fecha];
+        const subtotal = items.reduce((s, g) => s + g.monto, 0);
+        return `
+            <div class="fecha-header">
+                <span>${esc(etiquetaDia(fecha))}</span>
+                <span>$${subtotal.toFixed(2)}</span>
+            </div>
+            ${items.map(g => {
+                const cat = cats[g.categoria] || cats.otros;
+                const tasaGasto = g.tasaUsada || obtenerTasaFecha(g.fecha) || state.tasaBCV || 1;
+                const montoUSD = g.monedaOriginal === 'BS' ? g.montoOriginal / tasaGasto : g.montoOriginal;
+                const montoBs = montoUSD * tasaGasto;
+                const detalleMoneda = g.monedaOriginal === 'BS'
+                    ? `Bs. ${g.montoOriginal.toFixed(2)} → $${montoUSD.toFixed(2)}`
+                    : `Bs. ${montoBs.toFixed(2)}`;
+
+                return `
+                    <div class="item-card">
+                        <button class="delete-btn" onclick="eliminarGasto(${g.id})">✕</button>
+                        <div class="item-header">
+                            <span class="item-title">${esc(g.nombre)}</span>
+                            <span class="item-monto monto-privado">$${montoUSD.toFixed(2)}</span>
+                        </div>
+                        <div class="badge-row">
+                            <span class="badge" style="color:${cat.color}; border-color:${cat.color}55;">${cat.icon} ${esc(cat.label)}</span>
+                            ${g.igtf ? `<span class="badge" style="color:var(--warning); border-color:var(--warning)55;">IGTF 3%</span>` : ''}
+                            ${g.fecha !== hoyISO() ? `<span class="badge" style="color:var(--gold); border-color:var(--gold)55;">📅 ${formatearFecha(g.fecha)}</span>` : ''}
+                        </div>
+                        <div class="item-sub">${detalleMoneda} · tasa ${tasaGasto.toFixed(2)}</div>
+                        ${g.notas ? `<div class="item-sub">📝 ${esc(g.notas)}</div>` : ''}
+                        <div class="row-actions">
+                            <button onclick="abrirModalEdit('gasto', ${g.id})">✎ Editar</button>
+                            <button onclick="duplicarGasto(${g.id})">⎘ Duplicar</button>
+                        </div>
+                    </div>
+                `;
+            }).join('')}
+        `;
+    }).join('');
+}
+
+function duplicarGasto(id) {
+    const g = state.gastos.find(x => x.id === id);
+    if (!g) return;
+    abrirModal('gasto');
+    $('gasto-nombre').value = g.nombre;
+    $('gasto-monto').value = g.montoOriginal;
+    $('gasto-moneda').value = g.monedaOriginal;
+    $('gasto-igtf').checked = !!g.igtf;
+    $('gasto-notas').value = g.notas || '';
+    state.categoriaSeleccionada = g.categoria;
+    document.querySelectorAll('.categoria-item').forEach(el => el.classList.toggle('selected', el.dataset.cat === g.categoria));
+    actualizarPreviewGasto();
+}
+
+function renderIngresos() {
+    const cont = $('lista-ingresos');
+    const busqueda = ($('buscarIngresos').value || '').toLowerCase().trim();
+    let lista = state.ingresos;
+    if (busqueda) lista = lista.filter(i => (i.nombre || '').toLowerCase().includes(busqueda) || (i.notas || '').toLowerCase().includes(busqueda));
+    lista = [...lista].sort((a,b) => b.fecha.localeCompare(a.fecha) || (b.creado || b.id) - (a.creado || a.id));
+
+    const total = lista.reduce((s, i) => s + i.monto, 0);
+    const totalBs = lista.reduce((s, i) => s + i.monto * tasaDeRegistro(i), 0);
+
+    $('totalIngresos').innerHTML = lista.length
+        ? `<span>${lista.length} ingreso${lista.length === 1 ? '' : 's'}</span> · Total: <b>$${total.toFixed(2)}</b> · Bs. ${totalBs.toFixed(2)}`
+        : '';
+
+    if (!lista.length) {
+        cont.innerHTML = `<div class="empty-state"><div class="icon">💰</div><p>Sin ingresos registrados</p><p style="font-size:12px; margin-top:8px;">Toca el botón + para agregar uno</p></div>`;
+        return;
+    }
+
+    cont.innerHTML = lista.map(i => {
+        const f = FUENTES_INGRESO[i.fuente] || FUENTES_INGRESO.otros;
+        const tasa = i.tasaUsada || obtenerTasaFecha(i.fecha) || state.tasaBCV || 1;
+        const montoUSD = i.monedaOriginal === 'BS' ? i.montoOriginal / tasa : i.montoOriginal;
+        const detalle = i.monedaOriginal === 'BS'
+            ? `Bs. ${i.montoOriginal.toFixed(2)} → $${montoUSD.toFixed(2)}`
+            : `Bs. ${(montoUSD * tasa).toFixed(2)}`;
+
+        return `
+            <div class="item-card" style="border-left-color: var(--secondary);">
+                <button class="delete-btn" onclick="eliminarIngreso(${i.id})">✕</button>
+                <div class="item-header">
+                    <span class="item-title">${esc(i.nombre)}</span>
+                    <span class="item-monto monto-privado" style="color:var(--secondary);">+$${montoUSD.toFixed(2)}</span>
+                </div>
+                <div class="badge-row">
+                    <span class="badge">${f.icon} ${f.label}</span>
+                    <span class="badge">${formatearFecha(i.fecha)}</span>
+                </div>
+                <div class="item-sub">${detalle}</div>
+                ${i.notas ? `<div class="item-sub">📝 ${esc(i.notas)}</div>` : ''}
+                <div class="row-actions">
+                    <button onclick="abrirModalEdit('ingreso', ${i.id})">✎ Editar</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderDeudas() {
+    const cont = $('lista-deudas');
+    const pendienteTotal = state.deudas.reduce((s, d) => s + saldoPendiente(d), 0);
+    const totalDeudas = state.deudas.reduce((s, d) => s + d.montoTotal * (1 + (d.interes || 0) / 100), 0);
+
+    $('totalDeudas').innerHTML = state.deudas.length
+        ? `<span>${state.deudas.length} deuda${state.deudas.length === 1 ? '' : 's'}</span> · Pendiente: <b>$${pendienteTotal.toFixed(2)}</b> / Total: $${totalDeudas.toFixed(2)}`
+        : '';
+
+    const hint = $('estrategiaHint');
+    if (state.config.estrategia === 'ninguna') {
+        hint.textContent = 'Sin estrategia activa.';
+    } else {
+        const orden = sugerirOrdenDeudas();
+        if (orden.length) {
+            hint.innerHTML = `Orden sugerido: <b>${orden.map(d => esc(d.nombre)).join(' → ')}</b>`;
+        } else {
+            hint.textContent = 'No hay deudas pendientes.';
+        }
+    }
+
+    if (!state.deudas.length) {
+        cont.innerHTML = `<div class="empty-state"><div class="icon">💳</div><p>Sin deudas registradas</p><p style="font-size:12px; margin-top:8px;">Agrega Cashea u otra app con el botón +</p></div>`;
+        return;
+    }
+
+    const ordenadas = state.config.estrategia === 'ninguna' ? state.deudas : sugerirOrdenDeudas();
+    const ordenMap = new Map(ordenadas.map((d, i) => [d.id, i]));
+
+    cont.innerHTML = [...state.deudas]
+        .sort((a, b) => (ordenMap.get(a.id) ?? 999) - (ordenMap.get(b.id) ?? 999))
+        .map(d => {
+            const totalPagos = d.pagos.length;
+            const pagados = d.pagos.filter(p => p.pagado).length;
+            const pct = totalPagos ? (pagados / totalPagos) * 100 : 0;
+            const pendiente = saldoPendiente(d);
+            const prox = d.pagos.find(p => !p.pagado);
+            const abierta = state.deudasAbiertas.has(d.id);
+
+            let bloqueProx = '';
+            if (prox) {
+                const dias = diasHasta(prox.fecha);
+                let color = 'var(--secondary)', texto = `📅 Vence en ${dias} días`;
+                if (dias < 0) { color = 'var(--danger)'; texto = `⚠️ Vencida hace ${Math.abs(dias)} día${Math.abs(dias) === 1 ? '' : 's'}`; }
+                else if (dias === 0) { color = 'var(--danger)'; texto = '⚠️ ¡Vence HOY!'; }
+                else if (dias <= 3) { color = 'var(--warning)'; texto = `⏰ Vence en ${dias} día${dias === 1 ? '' : 's'}`; }
+                else if (dias <= 7) { color = 'var(--gold)'; texto = `🔔 Vence en ${dias} días`; }
+
+                const abonos = prox.abonos ? prox.abonos.reduce((s, a) => s + a.monto, 0) : 0;
+                const restante = prox.monto - abonos;
+
+                bloqueProx = `
+                    <div class="prox-pago">
+                        <div style="flex:1; min-width:0;">
+                            <div style="font-weight:600; font-size:13px;">Próxima cuota ${prox.n} de ${totalPagos}</div>
+                            <div class="item-sub">${formatearFecha(prox.fecha)} · $${restante.toFixed(2)}${abonos > 0 ? ` (abonado $${abonos.toFixed(2)})` : ''}</div>
+                            <div style="color:${color}; margin-top:4px; font-size:12px; font-weight:700;">${texto}</div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <button class="btn-mini primary" onclick="togglePago(${d.id}, ${prox.n})">✓ Pagar</button>
+                            <button class="btn-mini" onclick="abrirPagoParcial(${d.id}, ${prox.n})">Abonar</button>
+                        </div>
+                    </div>`;
+            } else {
+                bloqueProx = `<div class="prox-pago" style="justify-content:center;">
+                    <span style="color:var(--secondary); font-weight:bold;">✅ ¡Deuda pagada por completo!</span>
+                </div>`;
+            }
+
+            const listaPagos = abierta ? `
+                <div class="pagos-lista">
+                    ${d.pagos.map(p => {
+                        const dias = diasHasta(p.fecha);
+                        let colorFecha = 'var(--text-muted)';
+                        if (!p.pagado) {
+                            if (dias < 0) colorFecha = 'var(--danger)';
+                            else if (dias <= 3) colorFecha = 'var(--warning)';
+                        }
+                        const abonos = p.abonos ? p.abonos.reduce((s, a) => s + a.monto, 0) : 0;
+                        const restante = p.monto - abonos;
+                        return `
+                            <div class="pago-row ${p.pagado ? 'pagado' : ''}">
+                                <button class="check ${p.pagado ? 'on' : ''}" onclick="togglePago(${d.id}, ${p.n})">${p.pagado ? '✓' : ''}</button>
+                                <div class="pago-info">
+                                    <div class="pago-nombre">Cuota ${p.n} de ${totalPagos}</div>
+                                    <div class="pago-fecha" style="color:${colorFecha};">
+                                        ${formatearFecha(p.fecha)}${p.pagado ? ' · pagada ' + formatearFecha(p.fechaPago) : ''}
+                                        ${abonos > 0 && !p.pagado ? ` · abonado $${abonos.toFixed(2)}` : ''}
+                                    </div>
+                                </div>
+                                <div class="pago-monto">$${restante.toFixed(2)}</div>
+                            </div>`;
+                    }).join('')}
+                </div>` : '';
+
+            const interesBadge = d.interes ? `<span class="badge" style="color:var(--warning); border-color:var(--warning)55;">${d.interes}% interés</span>` : '';
+
+            return `
+                <div class="item-card ${(!prox) ? 'completado' : (diasHasta(prox.fecha) < 0 ? 'vencido' : (diasHasta(prox.fecha) <= 3 ? 'urgente' : ''))}">
+                    <button class="delete-btn" onclick="eliminarDeuda(${d.id})">✕</button>
+                    <div class="item-header">
+                        <div style="min-width:0; flex:1;">
+                            <div class="item-title" style="padding-right:0;">${esc(d.nombre)}</div>
+                            <div class="item-sub">${frecuenciaLabel(d.frecuencia)} · $${(d.montoTotal * (1+(d.interes||0)/100) / totalPagos).toFixed(2)} por cuota</div>
+                        </div>
+                        <div style="text-align:right;">
+                            <div class="deuda-monto monto-privado">$${pendiente.toFixed(2)}</div>
+                            <div class="item-sub">pendiente</div>
+                        </div>
+                    </div>
+
+                    ${interesBadge ? `<div class="badge-row">${interesBadge}</div>` : ''}
+
+                    <div class="progress">
+                        <div class="progress-bar ${pct >= 100 ? '' : (pct >= 50 ? '' : 'warn')}" style="width:${pct}%"></div>
+                    </div>
+                    <div class="progress-txt">
+                        <span>${pagados} de ${totalPagos} cuotas</span>
+                        <span>${pct.toFixed(0)}%</span>
+                    </div>
+
+                    ${bloqueProx}
+
+                    <div class="row-actions">
+                        <button onclick="toggleDetalleDeuda(${d.id})">${abierta ? '▲ Ocultar cuotas' : `▼ Ver ${totalPagos} cuotas`}</button>
+                        <button onclick="abrirModalEdit('deuda', ${d.id})">✎ Editar</button>
+                    </div>
+                    ${listaPagos}
+                </div>
+            `;
+        }).join('');
+}
+
+function frecuenciaLabel(f) {
+    return { semanal: 'Semanal', quincenal: 'Quincenal', mensual: 'Mensual' }[f] || f;
+}
+
+function cambiarMes(delta) {
+    const input = $('mesResumen');
+    if (!input.value) {
+        const d = new Date();
+        input.value = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    }
+    const [a, m] = input.value.split('-').map(Number);
+    const d = new Date(a, m - 1 + delta, 1);
+    input.value = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    renderResumen();
+}
+
+function renderResumen() {
+    const input = $('mesResumen');
+    if (!input.value) {
+        const d = new Date();
+        input.value = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    }
+    const [anio, mes] = input.value.split('-').map(Number);
+    const diasDelMes = new Date(anio, mes, 0).getDate();
+
+    const gastosMes = state.gastos.filter(g => {
+        const f = new Date(g.fecha + 'T00:00:00');
+        return f.getFullYear() === anio && f.getMonth() === mes - 1;
+    });
+    const ingresosMes = state.ingresos.filter(i => {
+        const f = new Date(i.fecha + 'T00:00:00');
+        return f.getFullYear() === anio && f.getMonth() === mes - 1;
+    });
+
+    const totalGastos = gastosMes.reduce((s, g) => s + g.monto, 0);
+    const totalIngresos = ingresosMes.reduce((s, i) => s + i.monto, 0);
+    const balance = totalIngresos - totalGastos;
+    const saldoAnterior = saldoAntesDe(`${anio}-${String(mes).padStart(2,'0')}-01`);
+    const disponible = saldoAnterior + balance;
+    const promDiario = totalGastos / diasDelMes;
+
+    const porCat = {};
+    gastosMes.forEach(g => { porCat[g.categoria] = (porCat[g.categoria] || 0) + g.monto; });
+    const cats = Object.entries(porCat).sort((a, b) => b[1] - a[1]);
+    const catsDef = getCategorias();
+
+    const donutData = cats.slice(0, 8).map(([key, val]) => ({
+        label: catsDef[key]?.label || key,
+        value: val,
+        color: catsDef[key]?.color || '#95A5A6'
+    }));
+
+    let donutSVG = '';
+    if (donutData.length && totalGastos > 0) {
+        const r = 40, c = 2 * Math.PI * r;
+        let offset = 0;
+        const segs = donutData.map(d => {
+            const len = (d.value / totalGastos) * c;
+            const s = `<circle cx="50" cy="50" r="${r}" fill="none" stroke="${d.color}" stroke-width="16"
+                stroke-dasharray="${len} ${c - len}" stroke-dashoffset="${-offset}"
+                transform="rotate(-90 50 50)" />`;
+            offset += len;
+            return s;
+        }).join('');
+        donutSVG = `<div class="chart-donut"><svg viewBox="0 0 100 100" style="width:170px; height:170px;">${segs}
+            <text x="50" y="48" text-anchor="middle" font-size="7" fill="#94A3B8">Total mes</text>
+            <text x="50" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">$${totalGastos.toFixed(0)}</text>
+        </svg></div>`;
+    }
+
+    const presupuestos = state.config.presupuestos || {};
+    const clavesPresu = [...new Set([...Object.keys(porCat), ...Object.keys(presupuestos)])];
+    const presuHTML = clavesPresu.length ? clavesPresu.map(key => {
+        const cat = catsDef[key] || catsDef.otros;
+        const gastado = porCat[key] || 0;
+        const limite = presupuestos[key] || 0;
+        const pct = limite > 0 ? (gastado / limite) * 100 : 0;
+        let color = cat.color;
+        if (limite > 0) {
+            if (pct >= 100) color = 'var(--danger)';
+            else if (pct >= 80) color = 'var(--warning)';
+            else color = 'var(--secondary)';
+        }
+        return `
+            <div class="cat-row">
+                <div class="cat-ico">${cat.icon}</div>
+                <div class="cat-info">
+                    <div class="cat-top">
+                        <span>${esc(cat.label)}</span>
+                        <span>$${gastado.toFixed(2)}${limite > 0 ? ` / $${limite.toFixed(2)}` : ''}</span>
+                    </div>
+                    ${limite > 0 ? `<div class="cat-bar"><div style="width:${Math.min(pct, 100)}%; background:${color};"></div></div>` : ''}
+                </div>
+                ${limite > 0 ? `<div style="font-size:11px; color:${color}; width:44px; text-align:right;">${pct.toFixed(0)}%</div>` : ''}
+            </div>
+        `;
+    }).join('') : '<p style="font-size:12px; color:var(--text-muted); text-align:center; padding:8px 0;">Sin datos de gastos este mes</p>';
+
+    const pendienteDeudas = state.deudas.reduce((s, d) => s + saldoPendiente(d), 0);
+    const pagadoDeudas = state.deudas.reduce((s, d) =>
+        s + d.pagos.filter(p => p.pagado).reduce((a, p) => a + p.monto, 0), 0);
+
+    const nombreMes = new Date(anio, mes - 1, 1).toLocaleDateString('es-VE', { month: 'long', year: 'numeric' });
+
+    const metasHTML = state.metas.length ? state.metas.map(m => {
+        const pct = m.montoObjetivo > 0 ? (m.montoActual / m.montoObjetivo) * 100 : 0;
+        return `
+            <div class="meta-card">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title" style="font-size:13px;">🎯 ${esc(m.nombre)}</div>
+                        <div class="item-sub">$${m.montoActual.toFixed(2)} de $${m.montoObjetivo.toFixed(2)}${m.fechaLimite ? ` · antes del ${formatearFecha(m.fechaLimite)}` : ''}</div>
+                    </div>
+                    <span style="font-weight:700; color:${pct >= 100 ? 'var(--secondary)' : 'var(--primary)'};">${pct.toFixed(0)}%</span>
+                </div>
+                <div class="progress"><div class="progress-bar" style="width:${Math.min(pct, 100)}%"></div></div>
+                <div class="row-actions">
+                    <button onclick="abonarMeta(${m.id})">💵 Abonar</button>
+                    <button onclick="abrirModalEdit('meta', ${m.id})">✎ Editar</button>
+                    <button class="danger" onclick="eliminarMeta(${m.id})">✕ Eliminar</button>
+                </div>
+            </div>
+        `;
+    }).join('') : '<p style="font-size:12px; color:var(--text-muted); text-align:center; padding:8px 0;">Sin metas activas. Crea una con el botón +</p>';
+
+    $('resumenContenido').innerHTML = `
+        <div class="card">
+            <h3>Saldo disponible · ${esc(nombreMes)}</h3>
+            <div class="big-total">${fmtUSD(disponible)}
+                <small>${disponible >= 0 ? '✅ Tienes saldo disponible' : '⚠️ Gastaste más de lo que tenías'}</small>
+            </div>
+            ${state.tasaBCV > 0 ? `<div class="item-sub monto-privado" style="margin-top:2px;">≈ <b>${fmtBs(disponible * state.tasaBCV)}</b> a la tasa de hoy (Bs. ${state.tasaBCV.toFixed(2)})</div>` : ''}
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:12px;">
+                <div style="text-align:center; padding:9px 4px; background:var(--bg); border-radius:9px;">
+                    <div class="resumen-label">Saldo anterior</div>
+                    <div class="resumen-value" style="color:${saldoAnterior >= 0 ? 'var(--secondary)' : 'var(--danger)'}; font-size:15px;">${fmtUSD(saldoAnterior, true)}</div>
+                </div>
+                <div style="text-align:center; padding:9px 4px; background:var(--bg); border-radius:9px;">
+                    <div class="resumen-label">Ingresos</div>
+                    <div class="resumen-value" style="color:var(--secondary); font-size:15px;">+$${totalIngresos.toFixed(2)}</div>
+                </div>
+                <div style="text-align:center; padding:9px 4px; background:var(--bg); border-radius:9px;">
+                    <div class="resumen-label">Gastos</div>
+                    <div class="resumen-value" style="color:var(--danger); font-size:15px;">-$${totalGastos.toFixed(2)}</div>
+                </div>
+            </div>
+            <div class="item-sub" style="margin-top:10px; text-align:center;">Balance solo de este mes: ${fmtUSD(balance, true)}</div>
+            <div class="item-sub" style="margin-top:10px; text-align:center;">Promedio diario de gasto: $${promDiario.toFixed(2)} · ${gastosMes.length} movimiento${gastosMes.length === 1 ? '' : 's'}</div>
+        </div>
+
+        ${donutData.length ? `
+        <div class="card">
+            <h3>Distribución por categoría</h3>
+            ${donutSVG}
+            <div class="chart-legend">
+                ${donutData.map(d => `
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background:${d.color};"></div>
+                        <div class="legend-label">${esc(d.label)}</div>
+                        <div class="legend-val">$${d.value.toFixed(0)}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>` : ''}
+
+        <div class="card">
+            <h3>Presupuesto por categoría</h3>
+            <div>${presuHTML}</div>
+            <button class="btn-secondary" onclick="editarPresupuestos()">✎ Editar presupuestos</button>
+        </div>
+
+        <div class="card">
+            <h3>Deudas del mes</h3>
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-size:12px; color:var(--text-muted);">Total pagado</span>
+                <span style="font-weight:700; color:var(--secondary);">$${pagadoDeudas.toFixed(2)}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+                <span style="font-size:12px; color:var(--text-muted);">Total pendiente</span>
+                <span style="font-weight:700; color:var(--danger);">$${pendienteDeudas.toFixed(2)}</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Metas de ahorro</h3>
+            ${metasHTML}
+        </div>
+    `;
+}
+
+function editarPresupuestos() {
+    const cats = getCategorias();
+    const actuales = state.config.presupuestos || {};
+    let texto = 'Define presupuestos mensuales (USD). Deja vacío para quitar el límite:\n\n';
+    Object.keys(cats).forEach(k => { texto += `${k}: ${actuales[k] || ''}\n`; });
+    const respuesta = prompt(texto, '');
+    if (respuesta === null) return;
+    const nuevo = {};
+    respuesta.split('\n').forEach(linea => {
+        const [k, v] = linea.split(':').map(s => (s || '').trim());
+        if (k && v && cats[k]) {
+            const n = parseFloat(v);
+            if (n > 0) nuevo[k] = n;
+        }
+    });
+    state.config.presupuestos = nuevo;
+    guardar();
+    renderResumen();
+    toast('Presupuestos actualizados', 'ok');
+}
+
+/* =========================================================
+   CONFIGURACIÓN
+   ========================================================= */
+function abrirConfig() {
+    $('modalConfig').classList.add('open');
+    renderPapelera();
+    actualizarEstadoNotif();
+    $('themeToggle').checked = state.config.theme === 'light';
+    $('privacyToggle').checked = !!state.config.privacy;
+    $('pinToggle').checked = !!state.config.pinEnabled;
+    $('btnCambiarPin').style.display = state.config.pinEnabled ? 'block' : 'none';
+}
+function cerrarConfig() { $('modalConfig').classList.remove('open'); }
+
+function renderPapelera() {
+    const cont = $('papeleraContenido');
+    if (!state.papelera.length) {
+        cont.innerHTML = '<p style="font-size:12px; color:var(--text-muted); text-align:center; padding:6px 0;">La papelera está vacía</p>';
+        return;
+    }
+    cont.innerHTML = state.papelera.slice(0, 20).map((p, idx) => {
+        let nombre = '', detalle = '';
+        if (p.tipo === 'gasto') { nombre = p.item.nombre; detalle = `$${p.item.monto.toFixed(2)} · ${formatearFecha(p.item.fecha)}`; }
+        if (p.tipo === 'ingreso') { nombre = p.item.nombre; detalle = `$${p.item.monto.toFixed(2)} · ${formatearFecha(p.item.fecha)}`; }
+        if (p.tipo === 'deuda') { nombre = p.item.nombre; detalle = `$${p.item.montoTotal.toFixed(2)} · ${p.item.pagos.length} cuotas`; }
+        return `
+            <div style="display:flex; align-items:center; gap:8px; padding:9px 0; border-bottom:1px solid var(--border);">
+                <div style="flex:1; min-width:0;">
+                    <div style="font-size:13px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${esc(nombre)}</div>
+                    <div style="font-size:11px; color:var(--text-muted);">${esc(p.tipo)} · ${detalle}</div>
+                </div>
+                <button class="btn-mini" onclick="restaurarDePapelera(${idx})">↺</button>
+                <button class="btn-mini danger" onclick="borrarDePapelera(${idx})">✕</button>
+            </div>
+        `;
+    }).join('') + `
+        <button class="btn-danger" style="margin-top:10px;" onclick="vaciarPapelera()">🗑 Vaciar papelera</button>
+    `;
+}
+
+/* =========================================================
+   PLANTILLAS
+   ========================================================= */
+function abrirPlantillas() {
+    cerrarFab();
+    const cont = $('listaPlantillas');
+    if (!state.plantillas.length) {
+        cont.innerHTML = '<p style="text-align:center; color:var(--text-muted); padding:20px; font-size:13px;">No tienes plantillas guardadas.<br><br>Al guardar un gasto, usa el botón "Guardar como plantilla".</p>';
+    } else {
+        const cats = getCategorias();
+        cont.innerHTML = state.plantillas.map((p, idx) => {
+            const cat = cats[p.categoria] || cats.otros;
+            return `
+                <div class="item-card" style="cursor:pointer;" onclick="usarPlantilla(${idx})">
+                    <div class="item-header">
+                        <span class="item-title">${esc(p.nombre)}</span>
+                        <span class="item-monto">${p.moneda === 'USD' ? '$' : 'Bs.'}${p.monto.toFixed(2)}</span>
+                    </div>
+                    <span class="badge" style="color:${cat.color}; border-color:${cat.color}55;">${cat.icon} ${esc(cat.label)}</span>
+                    <div class="row-actions">
+                        <button class="danger" onclick="event.stopPropagation(); eliminarPlantilla(${idx})">✕ Eliminar</button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+    $('modalPlantillas').classList.add('open');
+}
+function cerrarPlantillas() { $('modalPlantillas').classList.remove('open'); }
+
+function usarPlantilla(idx) {
+    const p = state.plantillas[idx];
+    if (!p) return;
+    cerrarPlantillas();
+    abrirModal('gasto');
+    $('gasto-nombre').value = p.nombre;
+    $('gasto-monto').value = p.monto;
+    $('gasto-moneda').value = p.moneda;
+    $('gasto-notas').value = p.notas || '';
+    state.categoriaSeleccionada = p.categoria;
+    document.querySelectorAll('.categoria-item').forEach(el => el.classList.toggle('selected', el.dataset.cat === p.categoria));
+    actualizarPreviewGasto();
+}
+
+function eliminarPlantilla(idx) {
+    if (!confirm('¿Eliminar esta plantilla?')) return;
+    state.plantillas.splice(idx, 1);
+    guardar();
+    abrirPlantillas();
+}
+
+/* =========================================================
+   EXPORTAR / IMPORTAR
+   ========================================================= */
+function exportarDatos() {
+    const data = {
+        app: 'Lapa App',
+        version: 2,
+        exportado: new Date().toISOString(),
+        tasaBCV: state.tasaBCV,
+        tasasHistorial: state.tasasHistorial,
+        tasasManuales: state.tasasManuales,
+        config: state.config,
+        gastos: state.gastos,
+        ingresos: state.ingresos,
+        deudas: state.deudas,
+        metas: state.metas,
+        plantillas: state.plantillas,
+        papelera: state.papelera
+    };
+    descargarArchivo(`lapa-respaldo-${hoyISO()}.json`, JSON.stringify(data, null, 2), 'application/json');
+    toast('Respaldo descargado', 'ok');
+}
+
+function importarDatos(ev) {
+    const file = ev.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+        try {
+            const data = JSON.parse(e.target.result);
+            if (!data.gastos && !data.deudas) throw new Error('Formato inválido');
+            if (!confirm('Esto reemplazará tus datos actuales. ¿Continuar?')) return;
+
+            state.gastos = data.gastos || [];
+            state.ingresos = data.ingresos || [];
+            state.deudas = data.deudas || [];
+            state.metas = data.metas || [];
+            state.plantillas = data.plantillas || [];
+            state.papelera = data.papelera || [];
+            state.config = data.config || state.config;
+            state.tasasHistorial = data.tasasHistorial || state.tasasHistorial;
+            state.tasasManuales = data.tasasManuales || state.tasasManuales;
+            if (data.tasaBCV) state.tasaBCV = data.tasaBCV;
+
+            guardar();
+            render();
+            toast('Respaldo restaurado', 'ok');
+        } catch (err) {
+            toast('Archivo inválido', 'err');
+        }
+    };
+    reader.readAsText(file);
+    ev.target.value = '';
+}
+
+function exportarCSV() {
+    const cats = getCategorias();
+    const lineas = ['Fecha,Descripción,Categoría,Monto USD,Monto Original,Moneda,Tasa,IGTF,Notas'];
+    state.gastos.sort((a,b) => a.fecha.localeCompare(b.fecha)).forEach(g => {
+        const cat = cats[g.categoria]?.label || g.categoria;
+        lineas.push([
+            g.fecha,
+            `"${(g.nombre || '').replace(/"/g, '""')}"`,
+            `"${cat}"`,
+            g.monto.toFixed(2),
+            (g.montoOriginal || g.monto).toFixed(2),
+            g.monedaOriginal || 'USD',
+            (g.tasaUsada || '').toString(),
+            g.igtf ? 'Sí' : 'No',
+            `"${(g.notas || '').replace(/"/g, '""')}"`
+        ].join(','));
+    });
+    descargarArchivo(`lapa-gastos-${hoyISO()}.csv`, lineas.join('\n'), 'text/csv;charset=utf-8;');
+    toast('CSV descargado', 'ok');
+}
+
+function exportarICS() {
+    const ahora = new Date();
+    const eventos = [];
+    state.deudas.forEach(d => {
+        d.pagos.filter(p => !p.pagado).forEach(p => {
+            const fechaInicio = p.fecha.replace(/-/g, '') + 'T090000';
+            const fechaFin = p.fecha.replace(/-/g, '') + 'T093000';
+            const uid = `lapa-${d.id}-${p.n}@lapa.app`;
+            eventos.push([
+                'BEGIN:VEVENT',
+                `UID:${uid}`,
+                `DTSTAMP:${ahora.toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
+                `DTSTART:${fechaInicio}`,
+                `DTEND:${fechaFin}`,
+                `SUMMARY:Pago ${d.nombre} - Cuota ${p.n}/${d.pagos.length}`,
+                `DESCRIPTION:Monto: $${p.monto.toFixed(2)}`,
+                'BEGIN:VALARM',
+                'ACTION:DISPLAY',
+                'DESCRIPTION:Recordatorio de pago',
+                `TRIGGER:-P${state.config.diasAviso}D`,
+                'END:VALARM',
+                'END:VEVENT'
+            ].join('\r\n'));
+        });
+    });
+    if (!eventos.length) return toast('No hay pagos pendientes para exportar', 'err');
+
+    const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Lapa App//Control de Gastos//ES',
+        'CALSCALE:GREGORIAN',
+        ...eventos,
+        'END:VCALENDAR'
+    ].join('\r\n');
+
+    descargarArchivo(`lapa-pagos-${hoyISO()}.ics`, ics, 'text/calendar;charset=utf-8;');
+    toast('Calendario exportado. Ábrelo en tu app de calendario.', 'ok');
+}
+
+async function compartirResumen() {
+    const hoy = new Date();
+    const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
+    const g = state.gastos.filter(x => x.fecha.startsWith(mesActual)).reduce((s,x) => s + x.monto, 0);
+    const i = state.ingresos.filter(x => x.fecha.startsWith(mesActual)).reduce((s,x) => s + x.monto, 0);
+    const bal = saldoAntesDe(`${mesActual}-01`) + i - g;
+    const pendiente = state.deudas.reduce((s, d) => s + saldoPendiente(d), 0);
+    const prox = proximosPagos()[0];
+
+    const texto = `💰 *Lapa App* — Resumen de ${hoy.toLocaleDateString('es-VE', { month: 'long' })}
+
+💵 Ingresos: $${i.toFixed(2)}
+💸 Gastos: $${g.toFixed(2)}
+${bal >= 0 ? '✅' : '⚠️'} Saldo disponible: ${fmtUSD(bal)}
+
+💳 Deudas pendientes: $${pendiente.toFixed(2)}
+${prox ? `⏰ Próximo pago: ${prox.deuda.nombre} — $${prox.pago.monto.toFixed(2)} (${prox.dias < 0 ? 'vencido' : prox.dias === 0 ? 'hoy' : 'en ' + prox.dias + 'd'})` : ''}
+
+_Generado con Lapa App_`;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({ title: 'Resumen Lapa', text: texto });
+            toast('Compartido', 'ok');
+        } catch (e) { /* usuario canceló */ }
+    } else {
+        try {
+            await navigator.clipboard.writeText(texto);
+            toast('Resumen copiado al portapapeles', 'ok');
+        } catch (e) {
+            window.open('https://wa.me/?text=' + encodeURIComponent(texto), '_blank');
+        }
+    }
+}
+
+function borrarTodo() {
+    if (!confirm('⚠️ Se borrarán TODOS tus datos. ¿Estás seguro?')) return;
+    if (!confirm('Esta acción NO se puede deshacer. ¿Confirmas?')) return;
+    ['lapa_gastos','lapa_ingresos','lapa_deudas','lapa_metas','lapa_plantillas','lapa_papelera',
+     'lapa_config','lapa_notif_reg','lapa_tasa','lapa_tasas_historial','lapa_tasas_manuales','lapa_historial_fecha'].forEach(k => localStorage.removeItem(k));
+    location.reload();
+}
+
+
+/* =========================================================
+   PUENTE NATIVO (Capacitor / Android). En el navegador no hace nada.
+   ========================================================= */
+const esNativa = () => !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+const plug = n => window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins[n];
+
+async function descargarArchivo(nombre, contenido, mime) {
+    if (esNativa() && plug('Filesystem') && plug('Share')) {
+        try {
+            const r = await plug('Filesystem').writeFile({ path: nombre, data: contenido, directory: 'CACHE', encoding: 'utf8' });
+            await plug('Share').share({ title: nombre, url: r.uri, dialogTitle: 'Guardar o compartir' });
+        } catch (e) { if (!/cancel/i.test(String(e))) toast('No se pudo guardar el archivo', 'err'); }
+        return;
+    }
+    const url = URL.createObjectURL(new Blob([contenido], { type: mime }));
+    const a = document.createElement('a');
+    a.href = url; a.download = nombre;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+async function permisoNotifNativo(pedir) {
+    const LN = plug('LocalNotifications');
+    if (!LN) return 'denied';
+    let p = await LN.checkPermissions();
+    if (pedir && p.display !== 'granted') p = await LN.requestPermissions();
+    return p.display;
+}
+function idNotif(str) { let h = 0; for (const c of str) h = (h * 31 + c.charCodeAt(0)) | 0; return Math.abs(h) % 2000000000 + 1; }
+
+let progNotifTimer;
+function programarNotifNativas() {
+    if (!esNativa()) return;
+    clearTimeout(progNotifTimer);
+    progNotifTimer = setTimeout(async () => {
+        const LN = plug('LocalNotifications');
+        try {
+            if (!LN || await permisoNotifNativo(false) !== 'granted') return;
+            const pend = await LN.getPending();
+            if (pend.notifications.length) await LN.cancel({ notifications: pend.notifications });
+            const mapa = new Map(), ahora = Date.now(), aviso = state.config.diasAviso || 0;
+            state.deudas.forEach(d => (d.pagos || []).filter(p => !p.pagado).forEach(p => {
+                [aviso, 0].forEach(dias => {
+                    const at = new Date(sumarDias(p.fecha, -dias) + 'T09:00:00');
+                    if (at.getTime() <= ahora) return;
+                    const id = idNotif(`${d.id}_${p.n}_${dias}`);
+                    mapa.set(id, { id, schedule: { at }, smallIcon: 'ic_stat_lapa',
+                        title: dias ? '⏰ Pago próximo' : '⏰ Pago de hoy',
+                        body: `${d.nombre} · Cuota ${p.n} de $${p.monto.toFixed(2)}` });
+                });
+            }));
+            const lista = [...mapa.values()].sort((a, b) => a.schedule.at - b.schedule.at).slice(0, 60);
+            if (lista.length) await LN.schedule({ notifications: lista });
+        } catch (e) { console.warn('Notif nativas:', e); }
+    }, 1500);
+}
+
+if (esNativa() && plug('App')) {
+    plug('App').addListener('backButton', () => {
+        const abierto = document.querySelector('.modal.open');
+        if (abierto) abierto.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        else plug('App').exitApp();
+    });
+}
+if (esNativa()) window.addEventListener('load', programarNotifNativas);
+
+/* =========================================================
+   EVENT LISTENERS ADICIONALES
+   ========================================================= */
+$('gasto-fecha') && $('gasto-fecha').addEventListener('change', () => actualizarTasaForm(true));
+$('ingreso-fecha') && $('ingreso-fecha').addEventListener('change', () => actualizarTasaIngreso(true));
+
+document.querySelectorAll('.modal').forEach(m => {
+    m.addEventListener('click', e => {
+        if (e.target === m) {
+            if (m.id === 'modal') cerrarModal();
+            if (m.id === 'modalConfig') cerrarConfig();
+            if (m.id === 'modalTasa') cerrarTasaManual();
+            if (m.id === 'modalPlantillas') cerrarPlantillas();
+            if (m.id === 'modalPagoParcial') cerrarPagoParcial();
+        }
+    });
+});
+</script>
+</body>
+</html>
