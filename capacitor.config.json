@@ -1,0 +1,10 @@
+{
+  "appId": "com.lapa.app",
+  "appName": "Lapa App",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "plugins": {
+    "CapacitorHttp": { "enabled": true },
+    "LocalNotifications": { "smallIcon": "ic_stat_lapa", "iconColor": "#EF8B34" }
+  }
+}
